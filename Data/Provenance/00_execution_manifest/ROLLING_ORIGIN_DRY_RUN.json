@@ -1,0 +1,872 @@
+{
+  "design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+  "processing_hash": "3fab57b81623045f745beeaa0c1615c51b0d44344beaa74a1025ee4450b699c7",
+  "gate_status": "PASS",
+  "expected_runs": [
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2024-H1",
+      "target_year": 2024,
+      "history_years": [
+        2023
+      ],
+      "history_length": 1,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2024-H2",
+      "target_year": 2024,
+      "history_years": [
+        2022,
+        2023
+      ],
+      "history_length": 2,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2024-H3",
+      "target_year": 2024,
+      "history_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "history_length": 3,
+      "target_role": "retrospective"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2025-H1",
+      "target_year": 2025,
+      "history_years": [
+        2024
+      ],
+      "history_length": 1,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2025-H2",
+      "target_year": 2025,
+      "history_years": [
+        2023,
+        2024
+      ],
+      "history_length": 2,
+      "target_role": "primary_independent_future_year"
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "id": "R2025-H3",
+      "target_year": 2025,
+      "history_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "history_length": 3,
+      "target_role": "primary_independent_future_year"
+    }
+  ],
+  "scientific_results_executed": false
+}

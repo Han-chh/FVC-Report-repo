@@ -1,0 +1,45 @@
+data_execution_backend: gee_cloud
+source_of_truth: report/publication/english/FVC_publication_en.pdf
+years: [2021, 2022, 2023, 2024, 2025]
+nominal_dates: ["07-20", "07-31", "08-10"]
+temporal_window_days: {before: 15, after: 15, inclusive: true}
+processing_order:
+  - reflectance_scaling
+  - native_qa
+  - source_pixel_ndvi
+  - average_to_native_fcover_grid
+  - temporal_nanmedian_on_fcover_grid
+minimum_finite_contributions: 2
+target_support:
+  product: Copernicus FCOVER 300m V2 RT6
+  grid: native_product_grid
+  crs: EPSG:4326
+  nominal_resolution_degrees: [0.002976190476204, 0.002976190476190]
+  resample_fcover: false
+  extra_coverage_threshold: null
+spatial_blocks:
+  size_m: 5000
+  crs: EPSG:32647
+  origin_xy_m: [525000, 4195000]
+historical_partition:
+  reserve_fraction: 0.20
+  seed: 42
+  ranking: sha256
+  complete_blocks_only: true
+  groupkfold_domain: development_only
+  loyo_domain: development_only
+  final_refit_domain: development_plus_reserve
+model:
+  family: OLS
+  intercept: true
+  predictor: NDVI
+  label: FCOVER_product_reference
+  prediction_clip: [0.0, 1.0]
+metrics: [RMSE, MAE, Bias, R2, Pearson_r]
+terminology:
+  fcover: operational_product_reference
+  valid_domain_mask: derived_from_source_nodata_and_raster_validity
+  reserve: pre_refit_historical_spatial_diagnostic
+  target_2024: retrospective_rolling_origin_evaluation
+  target_2025: primary_independent_future_year_evaluation
+active_experiments: [multi_aoi, rolling_origin]

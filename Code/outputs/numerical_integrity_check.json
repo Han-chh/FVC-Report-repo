@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "checks": {
+    "formal_runs_total": true,
+    "multi_aoi_runs": true,
+    "rolling_origin_runs": true,
+    "sensor_mean_rmse_multi_aoi": true,
+    "rolling_sequences": true,
+    "trajectory_split": true,
+    "block_contrasts": true,
+    "multiplicity_families": true,
+    "contrasts_per_family": true,
+    "within_family_holm_adjusted_significant": true,
+    "effect_directions": true,
+    "aoi01_tiny_effects": true,
+    "coefficient_recovery": true
+  },
+  "actual": {
+    "formal_runs_total": 144,
+    "multi_aoi_runs": 72,
+    "rolling_origin_runs": 72,
+    "sensor_mean_rmse_multi_aoi": {
+      "landsat": 0.036839928283332976,
+      "modis": 0.030787364660552295,
+      "sentinel2": 0.04102270483161814
+    },
+    "rolling_sequences": 24,
+    "monotonic_or_non_degrading": 12,
+    "non_monotonic": 12,
+    "block_contrasts": 72,
+    "multiplicity_families": 24,
+    "contrasts_per_family_unique": [
+      3
+    ],
+    "within_family_holm_adjusted_significant": 40,
+    "longer_history_better_significant": 32,
+    "longer_history_worse_significant": 8,
+    "aoi01_significant_abs_delta_lt_1e-4": 11,
+    "largest_significant_improvement": 0.0076544574984253,
+    "largest_significant_degradation": -0.00258911835804,
+    "coefficient_recovery_failures": []
+  }
+}

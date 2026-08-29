@@ -1,0 +1,6 @@
+years: [2021, 2022, 2023, 2024, 2025]
+nominal_month_days: ["07-20", "07-31", "08-10"]
+window_days_before: 15
+window_days_after: 15
+minimum_finite_contributions: 2
+

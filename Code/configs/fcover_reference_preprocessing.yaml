@@ -1,0 +1,23 @@
+product: Copernicus FCOVER 300m V2 RT6
+product_version_observed: V2.0.1
+encoding: {dtype: UInt16, scale: 0.004, offset: 0.0, nodata: 65535}
+product_provided_quality_fields: [QFLAG, NOBS]
+derived_validity_domain:
+  api_name: valid_domain_mask
+  source: source_nodata_and_raster_validity_semantics
+  interpretation: identifies_valid_fcover_support_cells_only
+  not_a_source_band: true
+  not_an_independent_quality_flag: true
+baseline_predicates:
+  - FCOVER_DN != nodata
+  - QFLAG != nodata
+  - NOBS != nodata
+  - valid_domain_mask == 1
+  - QFLAG < 255
+  - NOBS > 0
+  - 0 <= FCOVER_DN * 0.004 <= 1
+sources:
+  pum: https://land.copernicus.eu/en/technical-library/product-user-manual-fraction-of-green-vegetation-cover-300m-version-2/@@download/file
+  atbd: https://land.copernicus.eu/en/technical-library/algorithm-theoretical-basis-document-fraction-of-green-vegetation-cover-300m-version-2/@@download/file
+  validation: https://land.copernicus.eu/en/technical-library/validation-report-fraction-of-green-vegetation-cover-300m-version-2/@@download/file
+frozen_before_model_results: true

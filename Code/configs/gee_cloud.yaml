@@ -1,0 +1,25 @@
+project_id_env: EE_PROJECT_ID
+asset_root: projects/qinghai-internship-fvc-models/assets/fvc_report_data
+collections:
+  fcover_native: fcover_native
+  paired_observations: paired_observations
+tables:
+  aoi_registry: tables/aoi_registry
+  environmental_features: tables/environmental_features
+  preparation_manifest: tables/preparation_manifest
+source_collections:
+  sentinel2: COPERNICUS/S2_SR_HARMONIZED
+  sentinel2_cloud_probability: COPERNICUS/S2_CLOUD_PROBABILITY
+  landsat8: LANDSAT/LC08/C02/T1_L2
+  landsat9: LANDSAT/LC09/C02/T1_L2
+  modis: MODIS/061/MOD09Q1
+  fcover: Copernicus FCOVER 300m V2 RT6 V2.0.1 via CDSE native COG
+processing:
+  fcover_ingestion: in_memory_native_window_to_gee_asset
+  fcover_gcs_required: false
+  source_data_downloaded_locally: false
+  output_cube_unit: AOI_x_year
+  maximum_active_exports: 3
+  task_poll_seconds: 10
+  tile_scale: 4
+frozen_before_model_results: true

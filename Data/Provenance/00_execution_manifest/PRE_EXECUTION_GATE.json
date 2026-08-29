@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-08-11T15:26:40.827968+00:00",
+  "actual_design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+  "status": "PASS",
+  "checks": [
+    {
+      "gate": "readiness config",
+      "status": "PASS",
+      "detail": "readiness validation active; scientific execution remains disabled"
+    },
+    {
+      "gate": "frozen design hash",
+      "status": "PASS",
+      "detail": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b"
+    },
+    {
+      "gate": "four AOIs",
+      "status": "PASS",
+      "detail": "registered AOIs: ['AOI-00', 'AOI-01', 'AOI-02', 'AOI-03']"
+    },
+    {
+      "gate": "2021\u20132025 data availability",
+      "status": "PASS",
+      "detail": "all final-AOI AOI-year products READY"
+    },
+    {
+      "gate": "Sentinel source manifests",
+      "status": "PASS",
+      "detail": "807 exact asset-verified source-scene rows across 60 AOI/date groups"
+    },
+    {
+      "gate": "Landsat source manifests",
+      "status": "PASS",
+      "detail": "765 exact asset-verified source-scene rows across 60 AOI/date groups"
+    },
+    {
+      "gate": "MODIS source manifests",
+      "status": "PASS",
+      "detail": "420 exact asset-verified source-scene rows across 60 AOI/date groups"
+    },
+    {
+      "gate": "MODIS temporal rule",
+      "status": "PASS",
+      "detail": "8-day_best_observation_with_support_interval_overlapping_nominal_window"
+    },
+    {
+      "gate": "FCOVER valid-domain semantics",
+      "status": "PASS",
+      "detail": "derived valid-domain mask; QFLAG/NOBS remain product-provided"
+    },
+    {
+      "gate": "FCOVER source schema",
+      "status": "PASS",
+      "detail": "all active FCOVER revisions are schema- and provenance-verified"
+    },
+    {
+      "gate": "FCOVER active asset provenance",
+      "status": "PASS",
+      "detail": "all active FCOVER revisions are schema- and provenance-verified"
+    },
+    {
+      "gate": "processing hashes",
+      "status": "PASS",
+      "detail": "persisted active processing identity matches source/design contract"
+    },
+    {
+      "gate": "FCOVER grid",
+      "status": "PASS",
+      "detail": "all three source/GEE/local target grids align"
+    },
+    {
+      "gate": "GEE/local Sentinel parity",
+      "status": "PASS",
+      "detail": "active metric-derived three-sensor parity evidence passes"
+    },
+    {
+      "gate": "GEE/local Landsat parity",
+      "status": "PASS",
+      "detail": "active metric-derived three-sensor parity evidence passes"
+    },
+    {
+      "gate": "GEE/local MODIS parity",
+      "status": "PASS",
+      "detail": "active metric-derived three-sensor parity evidence passes"
+    },
+    {
+      "gate": "5 km block stability",
+      "status": "PASS",
+      "detail": "persisted namespaced cross-year block manifest verified"
+    },
+    {
+      "gate": "reserve isolation",
+      "status": "PASS",
+      "detail": "seed=42 SHA-256 deterministic reserve contract; runner asserts development-only diagnostics"
+    },
+    {
+      "gate": "rolling chronology",
+      "status": "PASS",
+      "detail": "all six primary windows precede their targets"
+    },
+    {
+      "gate": "target-label leakage",
+      "status": "PASS",
+      "detail": "chronology guard and target-isolated runner path are active"
+    },
+    {
+      "gate": "Paired-cube provenance",
+      "status": "PASS",
+      "detail": "all active paired cubes have verified FCOVER lineage"
+    },
+    {
+      "gate": "output-path readiness",
+      "status": "PASS",
+      "detail": "output root writable"
+    },
+    {
+      "gate": "scientific input manifest",
+      "status": "PASS",
+      "detail": "final scientific input manifest frozen"
+    },
+    {
+      "gate": "GEE task completeness",
+      "status": "PASS",
+      "detail": "60 FCOVER and 20 paired-cube preparation assets verified"
+    },
+    {
+      "gate": "removed experiment exclusion",
+      "status": "PASS",
+      "detail": "Normal/Strict sensitivity excluded"
+    },
+    {
+      "gate": "scientific execution interlock",
+      "status": "PASS",
+      "detail": "formal execution remains disabled and unacknowledged"
+    },
+    {
+      "gate": "no premature scientific results",
+      "status": "PASS",
+      "detail": "no model/result artifacts; validated extraction-only paired cache present"
+    }
+  ]
+}

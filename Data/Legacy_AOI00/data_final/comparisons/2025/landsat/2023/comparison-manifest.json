@@ -1,0 +1,6 @@
+{
+  "task_id": "new-landsat-2023",
+  "status": "completed",
+  "comparison_stats": "comparisons/2025/landsat/2023/comparison_stats.json",
+  "evaluation_mask_checksum": "d5d8cf7a001072d7ec58057b3e5974ba985842015b89f030a14f6fa2e187357a"
+}

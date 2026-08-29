@@ -1,0 +1,40 @@
+{
+  "task_id": "new-modis-2024",
+  "sensor": "modis",
+  "method": "ordinary_least_squares_intercept",
+  "slope_a": 0.9199975728988647,
+  "intercept_b": -0.07452970743179321,
+  "training_years": [
+    2024
+  ],
+  "year_sample_counts": {
+    "2024": 29183
+  },
+  "total_training_samples": 29183,
+  "training_input_checksum": "ef3e3337ab92c030ee845163bd3b011cc5566d1dc9b121a8f4fac48a73635907",
+  "data_config_hash": "f11871b0cab9e78afd499cc23a4f9a106b6ba9448ff313b3ed91d83ec7716beb",
+  "qa_config_hash": "0909096b4ec2554e55705d25a822e1c1d912cb3dc73d579e3026d4be3f239912",
+  "spatial_aggregation": "FCOVER native 300m footprint mean/support",
+  "spatial_group_count": 44,
+  "training_metrics": {
+    "rmse": 0.04564995691180229,
+    "mae": 0.036364469677209854,
+    "bias": -5.829952343106015e-08,
+    "r_squared": 0.8000093102455139,
+    "pearson_r": 0.8944324086886452,
+    "valid_comparison_count": 29183,
+    "mean_reference": 0.5163944959640503,
+    "mean_prediction": 0.5163944363594055,
+    "reference_standard_deviation": 0.10207878798246384,
+    "prediction_standard_deviation": 0.09130260348320007
+  },
+  "raw_prediction_range": [
+    0.007815249264240265,
+    0.665131688117981
+  ],
+  "raw_below_zero_ratio": 0.0,
+  "raw_above_one_ratio": 0.0,
+  "clip_ratio": 0.0,
+  "created_at": "2026-08-04T08:42:39.697920+00:00",
+  "code_commit": "9c3ce1022e0cba15cc18585ab129b4ae7b2546db"
+}

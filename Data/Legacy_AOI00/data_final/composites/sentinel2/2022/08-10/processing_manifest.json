@@ -1,0 +1,98 @@
+{
+  "derived_from_raw_only": true,
+  "statistics": {
+    "source": "sentinel2",
+    "product_id": "COPERNICUS/S2_SR_HARMONIZED",
+    "product_version": "Harmonized L2A",
+    "year": 2022,
+    "target_date": "2022-08-10",
+    "acquisition_count": 4,
+    "valid_scene_count": 4,
+    "total_pixel_count": 10138,
+    "water_masked_count": 9608,
+    "water_masked_ratio": 0.0002838626785339072,
+    "cloud_masked_count": 3790888,
+    "cloud_shadow_masked_count": 1635088,
+    "snow_ice_masked_count": 0,
+    "aerosol_or_quality_masked_count": 16045260,
+    "final_valid_count": 7587,
+    "valid_observation_count_distribution": {
+      "0": 235,
+      "1": 2316,
+      "2": 7131,
+      "3": 35,
+      "4": 421
+    },
+    "min_valid_observations": 2,
+    "scale": 0.0001,
+    "offset": 0.0,
+    "qa_config_hash": "0909096b4ec2554e55705d25a822e1c1d912cb3dc73d579e3026d4be3f239912",
+    "input_checksum": "665437daf5219ac4577cee92376e6647054fb1c06903b311c00f942329e9bfd3",
+    "output_checksum": "f5269486a82d6815d9dcc5f2c04c1f3a9c4b63de012d5a51ddb924acc1ea8320",
+    "water_once_ratio": 0.00976523969224699,
+    "no_land_valid_observation_ratio": 0.023180114420990335,
+    "water_caused_insufficient_ratio": 0.001085026632471888,
+    "scene_statistics": [
+      {
+        "product_id": "20220729T040551_20220729T041603_T47SNB",
+        "source_path": "/Users/hankchen/Desktop/青海实习/FVC模型/qh-fvc-data/storage/projects/prj_20260729085738_7fd76c__示例范围/data-center/imagery/series/series_20260729182250_38962d4d__sentinel-2-summer-l2a-series-多年度-series/years/2022/annual_20260729182250_f7837b7d__2022-s2-l2a-harmonized-r1/raw/acquisition/raw/sentinel2/20220729T040551_20220729T041603_T47SNB",
+        "input_checksum": "6fff2a195521920cbfc5001fc5687b336c3b89edb6d6c91532b043dfa2d2a091",
+        "total_pixel_count": 8461838,
+        "finite_reflectance_count": 8461838,
+        "water_masked_count": 0,
+        "water_masked_ratio": 0.0,
+        "cloud_masked_count": 44702,
+        "cloud_shadow_masked_count": 48356,
+        "snow_ice_masked_count": 0,
+        "aerosol_or_quality_masked_count": 8022630,
+        "final_valid_count": 342042
+      },
+      {
+        "product_id": "20220729T040551_20220729T041603_T47SNC",
+        "source_path": "/Users/hankchen/Desktop/青海实习/FVC模型/qh-fvc-data/storage/projects/prj_20260729085738_7fd76c__示例范围/data-center/imagery/series/series_20260729182250_38962d4d__sentinel-2-summer-l2a-series-多年度-series/years/2022/annual_20260729182250_f7837b7d__2022-s2-l2a-harmonized-r1/raw/acquisition/raw/sentinel2/20220729T040551_20220729T041603_T47SNC",
+        "input_checksum": "b767d4f895ec0dba98f1dbc83afbde2bbbb1d0a985eecba3133bfbef7d405de8",
+        "total_pixel_count": 8461838,
+        "finite_reflectance_count": 8461838,
+        "water_masked_count": 6056,
+        "water_masked_ratio": 0.000715683755704139,
+        "cloud_masked_count": 1303971,
+        "cloud_shadow_masked_count": 447294,
+        "snow_ice_masked_count": 0,
+        "aerosol_or_quality_masked_count": 0,
+        "final_valid_count": 6710136
+      },
+      {
+        "product_id": "20220808T040601_20220808T041605_T47SNC",
+        "source_path": "/Users/hankchen/Desktop/青海实习/FVC模型/qh-fvc-data/storage/projects/prj_20260729085738_7fd76c__示例范围/data-center/imagery/series/series_20260729182250_38962d4d__sentinel-2-summer-l2a-series-多年度-series/years/2022/annual_20260729182250_f7837b7d__2022-s2-l2a-harmonized-r1/raw/acquisition/raw/sentinel2/20220808T040601_20220808T041605_T47SNC",
+        "input_checksum": "5c3da6068673a5dc7aa6b691ffda021bcaa7518911a3d064f9ad526e9c91b850",
+        "total_pixel_count": 8461838,
+        "finite_reflectance_count": 8461838,
+        "water_masked_count": 3552,
+        "water_masked_ratio": 0.0004197669584314897,
+        "cloud_masked_count": 2277160,
+        "cloud_shadow_masked_count": 1053390,
+        "snow_ice_masked_count": 0,
+        "aerosol_or_quality_masked_count": 0,
+        "final_valid_count": 5168452
+      },
+      {
+        "product_id": "20220808T040601_20220808T041605_T47SNB",
+        "source_path": "/Users/hankchen/Desktop/青海实习/FVC模型/qh-fvc-data/storage/projects/prj_20260729085738_7fd76c__示例范围/data-center/imagery/series/series_20260729182250_38962d4d__sentinel-2-summer-l2a-series-多年度-series/years/2022/annual_20260729182250_f7837b7d__2022-s2-l2a-harmonized-r1/raw/acquisition/raw/sentinel2/20220808T040601_20220808T041605_T47SNB",
+        "input_checksum": "3719a231612b59b9bceec32779c958d91f63eafee98221d42e4deeeb3d38fd10",
+        "total_pixel_count": 8461838,
+        "finite_reflectance_count": 8461838,
+        "water_masked_count": 0,
+        "water_masked_ratio": 0.0,
+        "cloud_masked_count": 165055,
+        "cloud_shadow_masked_count": 86048,
+        "snow_ice_masked_count": 0,
+        "aerosol_or_quality_masked_count": 8022630,
+        "final_valid_count": 188892
+      }
+    ]
+  },
+  "outputs": {
+    "ndvi": "composites/sentinel2/2022/08-10/ndvi_median_fcover_support.tif",
+    "count": "composites/sentinel2/2022/08-10/valid_observation_count.tif"
+  }
+}

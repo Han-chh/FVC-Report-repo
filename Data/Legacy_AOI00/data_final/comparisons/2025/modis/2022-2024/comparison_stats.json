@@ -1,0 +1,20 @@
+{
+  "rmse": 0.0428374744951725,
+  "mae": 0.03348546102643013,
+  "bias": 0.0019598824437707663,
+  "r_squared": 0.8458769917488098,
+  "pearson_r": 0.919948551751384,
+  "valid_comparison_count": 29214,
+  "mean_reference": 0.5550838708877563,
+  "mean_prediction": 0.5570437908172607,
+  "reference_standard_deviation": 0.10911642014980316,
+  "prediction_standard_deviation": 0.09925950318574905,
+  "task_id": "new-modis-2022-2024",
+  "sensor": "modis",
+  "strategy": "2022-2024",
+  "method": "regression",
+  "difference_definition": "model_prediction_minus_fcover_reference",
+  "clipped_low_count": 3,
+  "clipped_high_count": 0,
+  "common_evaluation_mask_checksum": "b9374536b152093b1c881ddc9e5c291fed43a39e7f441e9252b1fcdd3ad8edd8"
+}

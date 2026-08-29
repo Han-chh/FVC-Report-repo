@@ -1,0 +1,40 @@
+{
+  "task_id": "new-landsat-2023",
+  "sensor": "landsat",
+  "method": "ordinary_least_squares_intercept",
+  "slope_a": 0.8639993071556091,
+  "intercept_b": -0.0029665231704711914,
+  "training_years": [
+    2023
+  ],
+  "year_sample_counts": {
+    "2023": 28379
+  },
+  "total_training_samples": 28379,
+  "training_input_checksum": "6b8b7ba69449953db5081360c44a9e2a55014045fcd691d6216cf065273ac54e",
+  "data_config_hash": "f11871b0cab9e78afd499cc23a4f9a106b6ba9448ff313b3ed91d83ec7716beb",
+  "qa_config_hash": "0909096b4ec2554e55705d25a822e1c1d912cb3dc73d579e3026d4be3f239912",
+  "spatial_aggregation": "FCOVER native 300m footprint mean/support",
+  "spatial_group_count": 45,
+  "training_metrics": {
+    "rmse": 0.04695713147521019,
+    "mae": 0.03747275844216347,
+    "bias": -1.720572484487093e-08,
+    "r_squared": 0.7834677696228027,
+    "pearson_r": 0.8851371490922304,
+    "valid_comparison_count": 28379,
+    "mean_reference": 0.5405924320220947,
+    "mean_prediction": 0.5405924320220947,
+    "reference_standard_deviation": 0.10091141611337662,
+    "prediction_standard_deviation": 0.08932044357061386
+  },
+  "raw_prediction_range": [
+    0.04467448964715004,
+    0.7431948781013489
+  ],
+  "raw_below_zero_ratio": 0.0,
+  "raw_above_one_ratio": 0.0,
+  "clip_ratio": 0.0,
+  "created_at": "2026-08-04T08:42:39.426841+00:00",
+  "code_commit": "9c3ce1022e0cba15cc18585ab129b4ae7b2546db"
+}

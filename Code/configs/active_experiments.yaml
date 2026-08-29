@@ -1,0 +1,9 @@
+active_experiments:
+  - id: multi_aoi
+    runner: scripts/20_run_multi_aoi_experiment.py
+  - id: rolling_origin
+    runner: scripts/21_run_rolling_origin_experiment.py
+removed_from_active_design:
+  - id: fcover_quality_sensitivity
+    archive: ../_deprecated
+    reason: research_scope_consolidation

@@ -1,0 +1,20 @@
+{
+  "rmse": 0.047711148858070374,
+  "mae": 0.03790184482932091,
+  "bias": -0.010013031773269176,
+  "r_squared": 0.8028886914253235,
+  "pearson_r": 0.9008882373904679,
+  "valid_comparison_count": 30220,
+  "mean_reference": 0.5561561584472656,
+  "mean_prediction": 0.5461431741714478,
+  "reference_standard_deviation": 0.1074642762541771,
+  "prediction_standard_deviation": 0.09623204916715622,
+  "task_id": "new-landsat-2022-2024",
+  "sensor": "landsat",
+  "strategy": "2022-2024",
+  "method": "regression",
+  "difference_definition": "model_prediction_minus_fcover_reference",
+  "clipped_low_count": 0,
+  "clipped_high_count": 0,
+  "common_evaluation_mask_checksum": "d5d8cf7a001072d7ec58057b3e5974ba985842015b89f030a14f6fa2e187357a"
+}

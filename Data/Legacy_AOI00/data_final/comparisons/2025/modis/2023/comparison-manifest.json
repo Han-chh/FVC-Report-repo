@@ -1,0 +1,6 @@
+{
+  "task_id": "new-modis-2023",
+  "status": "completed",
+  "comparison_stats": "comparisons/2025/modis/2023/comparison_stats.json",
+  "evaluation_mask_checksum": "b9374536b152093b1c881ddc9e5c291fed43a39e7f441e9252b1fcdd3ad8edd8"
+}

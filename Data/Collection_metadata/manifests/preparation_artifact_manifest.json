@@ -1,0 +1,377 @@
+[
+  {
+    "path": "00_methodology_audit/code_to_paper_mapping.md",
+    "size_bytes": 2493,
+    "sha256": "324dd849daf82df551dae8e51602004ab98e1b76a7fe294908942dc36104fbef"
+  },
+  {
+    "path": "00_methodology_audit/current_publication_methodology.md",
+    "size_bytes": 4388,
+    "sha256": "3fe933a11b8cb3fcaaa1fe602ac9af6cecb7da43a3f85d98816c031788a77ab4"
+  },
+  {
+    "path": "00_methodology_audit/discrepancies.md",
+    "size_bytes": 1694,
+    "sha256": "1e19d18025ff5b27c07585698fde9856e9d9f0f851e3ebd7a19f2bcd051f22f1"
+  },
+  {
+    "path": "00_methodology_audit/frozen_methodology.yaml",
+    "size_bytes": 1382,
+    "sha256": "70925703332ce7abe273feb62480ebf4b1108dff2778a09583a5eb68e5a6ed5e"
+  },
+  {
+    "path": "01_multi_aoi/candidate_aoi_map.png",
+    "size_bytes": 148080,
+    "sha256": "5efdca272b0099ae248a467387f4c676fb3069b1ed8b5a5b482abbe5522bedf2"
+  },
+  {
+    "path": "01_multi_aoi/candidate_aoi_registry.csv",
+    "size_bytes": 9450,
+    "sha256": "55807229a7d186103367f49ac9dc5f6123bb9b61f4a34a49ef5da738ca7caebd"
+  },
+  {
+    "path": "01_multi_aoi/candidate_aoi_registry.geojson",
+    "size_bytes": 76593,
+    "sha256": "c1fa3a2c000b01e0baaf0c2520f36a93f422b9006fac1a8393a0251fbc394582"
+  },
+  {
+    "path": "01_multi_aoi/candidate_selection_log.md",
+    "size_bytes": 846,
+    "sha256": "2e561e98ce952ed5fdd8f6b4f41e6ca86ff122b2ee80e723b2cf80be7326f4fd"
+  },
+  {
+    "path": "01_multi_aoi/environmental_features.csv",
+    "size_bytes": 4770,
+    "sha256": "8625a716c6f99490bd073a4ff2857d8ec0e7f70525222f6d4ece32d1c4a6e50e"
+  },
+  {
+    "path": "01_multi_aoi/experiment_design.md",
+    "size_bytes": 606,
+    "sha256": "5d0bd7e5c948d1dc0493e30aa7814e85ee9347fd91159ab62bb7e4cef90ea469"
+  },
+  {
+    "path": "01_multi_aoi/final_aoi_selection_report.md",
+    "size_bytes": 2965,
+    "sha256": "a709f94b06a0acc738c81a82b7abddeb9901d9a1be89609d3263c170bdecd5fc"
+  },
+  {
+    "path": "01_multi_aoi/final_four_aoi_registry.csv",
+    "size_bytes": 3876,
+    "sha256": "ab31ab42bc5cefae0ab85f7fc1c7f145db734d23eda253898c2a76c9b5f36469"
+  },
+  {
+    "path": "01_multi_aoi/final_four_aoi_registry.geojson",
+    "size_bytes": 27895,
+    "sha256": "640eac462c77b32858e5c45f04c184b4700ece6f6b57e56eae57bd7f78e8e547"
+  },
+  {
+    "path": "01_multi_aoi/selection_log.csv",
+    "size_bytes": 256,
+    "sha256": "9223d645d42ede276f7f31e49abe783008f5c95177b2485325040461d877626d"
+  },
+  {
+    "path": "01_multi_aoi/selection_method.md",
+    "size_bytes": 1581,
+    "sha256": "02ec7177d02e264c8c6215912fc7925d164e9d469e96d7c49607cb375f498aeb"
+  },
+  {
+    "path": "01_multi_aoi/selection_rules.yaml",
+    "size_bytes": 734,
+    "sha256": "ba5af11f1ec3881fc9665ee927cf21bb2f233812df8338f64a1a0467016f9332"
+  },
+  {
+    "path": "02_rolling_origin/NOT_RUN.md",
+    "size_bytes": 218,
+    "sha256": "c4a4c182e30ccfaed47a5f9b6e05193922eddb72ebfd6968ea23344a287759f4"
+  },
+  {
+    "path": "02_rolling_origin/chronology_rules.md",
+    "size_bytes": 547,
+    "sha256": "4b1255bd36ddf44bcca8469b2a7348aa63f5b1383eec8674858b8b2c34e575bc"
+  },
+  {
+    "path": "02_rolling_origin/experiment_design.md",
+    "size_bytes": 926,
+    "sha256": "8e4e9dc7f282b2a4debb34b7faabbccb9a298d5cd37fa5cf3bfccc96fdf5fa40"
+  },
+  {
+    "path": "02_rolling_origin/leakage_rules.md",
+    "size_bytes": 549,
+    "sha256": "8f72d1c4cf24f1257b28b44b7d2510a1e823bbcc53c16b53287e62a00ffc9f4e"
+  },
+  {
+    "path": "02_rolling_origin/planned_outputs.md",
+    "size_bytes": 399,
+    "sha256": "c4ee01ca0a07e1281281579ee9a3ed550e130af5cadfa0dac19418fde06359cd"
+  },
+  {
+    "path": "02_rolling_origin/rolling_origin_matrix.csv",
+    "size_bytes": 367,
+    "sha256": "19b83480392eecd603ce8116f3e6d41039a3df3f8a138760f726456d071cb503"
+  },
+  {
+    "path": "02_rolling_origin/statistical_plan.md",
+    "size_bytes": 588,
+    "sha256": "5a438d1e6488575b7cbfa4ea7da0b966d2c51554d5281cba5e7877af39d9b678"
+  },
+  {
+    "path": "03_fcover_quality/NOT_RUN.md",
+    "size_bytes": 235,
+    "sha256": "72b060e618bccff66dfb5e69d0df7a9e1a1fe5f28704ad0011ee9ed4950943a7"
+  },
+  {
+    "path": "03_fcover_quality/experiment_design.md",
+    "size_bytes": 790,
+    "sha256": "dee4a6a9b644d3116d7b5575d408d54786617a47fe5e27131d655e305ef6a876"
+  },
+  {
+    "path": "03_fcover_quality/normal_definition.md",
+    "size_bytes": 458,
+    "sha256": "0b9af4e749cd5a1f72745003eae4a6e2f3eddb2ec79907b03ac17f85ae6efe02"
+  },
+  {
+    "path": "03_fcover_quality/official_flag_semantics.md",
+    "size_bytes": 1255,
+    "sha256": "6034acd3528a7bdd822382e0e151685082831ad85305ae39f690fc44622b22aa"
+  },
+  {
+    "path": "03_fcover_quality/quality_profiles.yaml",
+    "size_bytes": 323,
+    "sha256": "fc9b3eee29feeb20586d62bc42c33c789c02c40cbe09808e61b0b05c284d378c"
+  },
+  {
+    "path": "03_fcover_quality/sample_retention_audit.csv",
+    "size_bytes": 54019,
+    "sha256": "12f76fad00639f754bc27ad1fc06d86df6cb2791c5d5ff9e14b36b1a7e40447c"
+  },
+  {
+    "path": "03_fcover_quality/strict_definition.md",
+    "size_bytes": 609,
+    "sha256": "39cbabe7bade558856204e40708c9ef3513c930e4c82f1ee969608b94312a20a"
+  },
+  {
+    "path": "04_preexecution_audit/academic_risk_register.md",
+    "size_bytes": 1476,
+    "sha256": "7694029d6486d58c45127b2a97867d706f3e334af9b93a56b59c574ea8d71680"
+  },
+  {
+    "path": "04_preexecution_audit/data_integrity_audit.md",
+    "size_bytes": 861,
+    "sha256": "844b3e011d39d6afc8cfcd8f57eea3d9ea2add85638faf191e1c9e031791c8f9"
+  },
+  {
+    "path": "04_preexecution_audit/design_audit.md",
+    "size_bytes": 1049,
+    "sha256": "483c47675d0b3cefb384e1d41d087f9135651c82186ee7109c6a1e1658f4e95e"
+  },
+  {
+    "path": "04_preexecution_audit/final_readiness_report.md",
+    "size_bytes": 830,
+    "sha256": "4db623ecdd8912fcc674527c3ef3847f1c8030ec73e249749416f66fcaa5f1db"
+  },
+  {
+    "path": "04_preexecution_audit/gee_cloud_asset_audit.json",
+    "size_bytes": 618,
+    "sha256": "8a58e28e4d96ffaae5e1d7f302a12f31a56de557ee010c554c30435bdf364a06"
+  },
+  {
+    "path": "04_preexecution_audit/leakage_audit.md",
+    "size_bytes": 509,
+    "sha256": "6ff1f3e904d914bc34c31a356b87641802a522a6a8bf49b44b20b3b466764a98"
+  },
+  {
+    "path": "04_preexecution_audit/preexecution_checks.json",
+    "size_bytes": 675,
+    "sha256": "d1c8608f507b2e3133e99c083727cf4fb123bb584ff0f30977012cb9154bd897"
+  },
+  {
+    "path": "04_preexecution_audit/reproducibility_audit.md",
+    "size_bytes": 910,
+    "sha256": "1f6d4fbc818c418c23a89d92c7428063b3954a9cf6bf4c46e5bfad14bb388016"
+  },
+  {
+    "path": "04_preexecution_audit/statistical_design_audit.md",
+    "size_bytes": 643,
+    "sha256": "83d4b19050991a31203086e976be8b27b82cf3efc7aeab54a9eec9130bda1029"
+  },
+  {
+    "path": "FINAL_PREPARATION_REPORT.md",
+    "size_bytes": 7243,
+    "sha256": "17ff1eb10cec0e9edf01053dd204af81823e1b10742d23a6da539f0ea99da422"
+  },
+  {
+    "path": "README.md",
+    "size_bytes": 2152,
+    "sha256": "c868bdc5924091b0df81f2824153b9f6e1c17c54f54e7e8f001a45ff6f4fff18"
+  },
+  {
+    "path": "data/README.md",
+    "size_bytes": 1011,
+    "sha256": "d8046cf12170b2a8df7d01c184fe012cb27771f60d93588f81300530528f6dae"
+  },
+  {
+    "path": "data/aoi/qinghai_adm1.geojson",
+    "size_bytes": 263343,
+    "sha256": "bc4afc7eacf4351ae5b3ae7a612327987ce1123cb5deb8574fb49107091c6623"
+  },
+  {
+    "path": "data/data_preparation_status.csv",
+    "size_bytes": 62247,
+    "sha256": "b0822c55ea077642db3a636d2b22ee81a5feb907ea63d5bfc9dba826ec42f3ab"
+  },
+  {
+    "path": "data/data_preparation_summary.csv",
+    "size_bytes": 163,
+    "sha256": "970757f0a97465b20174e040597e84d7f9cfce297ed70dc08e5a683b1c49f056"
+  },
+  {
+    "path": "data/gee_cloud_data_preparation_status.csv",
+    "size_bytes": 62247,
+    "sha256": "b0822c55ea077642db3a636d2b22ee81a5feb907ea63d5bfc9dba826ec42f3ab"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_aoi00_contract_repair.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_fcover_repair.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_group1_retry.json",
+    "size_bytes": 4173,
+    "sha256": "c6a5c29c9a8c8121b32ec4f830f4c332af2d76c56d1645f888fdedf852444638"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_group2.json",
+    "size_bytes": 16686,
+    "sha256": "913433212a7f42f15fb74f1b8e88fae5a33adee41bccb71050d81ed1cd062573"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_group2_tail.json",
+    "size_bytes": 4327,
+    "sha256": "f04b15a0929d926177caffc3ebfc4e65ad61cbc49f33bede2b849caaca4f29de"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_group3.json",
+    "size_bytes": 6692,
+    "sha256": "cb5ab9f1332a9f6c755bff42a34c0e583631480d714ce26b93ccfaf2c58c6ffa"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_aoi00.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_empty_repair.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_group1.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_group2.json",
+    "size_bytes": 1121,
+    "sha256": "4073ce3d301de13ff360b866f32ebbc0a9062baba256373bd71224328eea37a9"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_group4.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/logs/gee_cloud_failures_pair_group5.json",
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "data/manifests/gee_cloud_asset_manifest.json",
+    "size_bytes": 347985,
+    "sha256": "c8422c945e2a07a36a46a5ff75dfdd86f28b7d886e21863c195655dedea85e32"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest.json",
+    "size_bytes": 85740,
+    "sha256": "47ec9548e168e1e10e65608b1c66abe6036d4393c330243252601acf17a7e09a"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_aoi00_contract_repair.json",
+    "size_bytes": 1780,
+    "sha256": "f1f64fa230a638fbc39c722474e104009133eba899846beab717f73b2153f939"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_fcover_repair.json",
+    "size_bytes": 39611,
+    "sha256": "e97e149b7232b5a4e729a36a3316f07334bef82725f71a4792f1144de6910b98"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_group1_retry.json",
+    "size_bytes": 6033,
+    "sha256": "5b6768e001da746b2e6661b3b22fbbbb6048ebe650d9e194797887e7887ee723"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_group2.json",
+    "size_bytes": 31841,
+    "sha256": "6262065e0f77d6015da14b49660424cb7e71a683c12b23582603466556a4d868"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_group2_tail.json",
+    "size_bytes": 2972,
+    "sha256": "88e61717d34c08d76f8dbd38d21bd0ea01abc9f8e0f3fb7e5ece08e7bc7eb63e"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_group3.json",
+    "size_bytes": 25522,
+    "sha256": "7a176dce528d66f325924db3130440d6bc651104a8b56ca88d9289f542b8f05f"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_aoi00.json",
+    "size_bytes": 1817,
+    "sha256": "a5ed5d68a74bd567945da3cbdc6b7a9bf734a3dbe97aa97613397e912cff4b92"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_empty_repair.json",
+    "size_bytes": 367,
+    "sha256": "a4aafbea593731e6b115be5142d8780e79975774f6360899d1a7142000da4bb8"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_group1.json",
+    "size_bytes": 3652,
+    "sha256": "4d2a7b06574eb862776095b732d7d23979fcb484ae5df9df89f4d7ca6dfcae04"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_group2.json",
+    "size_bytes": 6607,
+    "sha256": "e174b10ee8f60635b8f504a9a9ea3293954575af8a803707ac5e544fe797ed62"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_group3.json",
+    "size_bytes": 6044,
+    "sha256": "f92b670054d87665660afb77873b5cb63c5a06866b3d5f1cc96aa7d0c08768b2"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_group4.json",
+    "size_bytes": 3652,
+    "sha256": "100e55c56c6201fa985cf37bcf4e7a856abb7cba0ff241864eeb2c5743aba033"
+  },
+  {
+    "path": "data/manifests/gee_cloud_preparation_manifest_pair_group5.json",
+    "size_bytes": 1827,
+    "sha256": "1a575ab3e02d4071c5f4c07015ebc51234e9e76bf7df61268cbfa29f9c208b26"
+  },
+  {
+    "path": "data/manifests/source_availability_manifest.csv",
+    "size_bytes": 62247,
+    "sha256": "b0822c55ea077642db3a636d2b22ee81a5feb907ea63d5bfc9dba826ec42f3ab"
+  }
+]

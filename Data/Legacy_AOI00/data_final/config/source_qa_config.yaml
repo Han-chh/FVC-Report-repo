@@ -1,0 +1,176 @@
+water_mask_mode: per-observation-native-dynamic-mask
+sentinel2:
+  product: COPERNICUS/S2_SR_HARMONIZED
+  processing_baseline_handling: harmonized_export; BOA_ADD_OFFSET already removed
+    by provider
+  reflectance:
+    multiplier: 0.0001
+    additive_offset: 0.0
+    valid_dn_min: 1
+    valid_dn_max: 10000
+    nodata_dn: 0
+  excluded_scl:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  cloud_probability_exclude_gte: 30
+  scl_2_retained: false
+  cloud_probability:
+    product: COPERNICUS/S2_CLOUD_PROBABILITY
+    native_resolution_m: 10
+    missing_policy: fail_observation
+  reflectance_resampling: average
+  mask_resampling: nearest
+modis:
+  product: MODIS/061/MOD09Q1
+  reflectance:
+    multiplier: 0.0001
+    additive_offset: 0.0
+    valid_dn_min: -100
+    valid_dn_max: 16000
+    nodata_dn: -28672
+    negative_reflectance: retained_when_qa_valid
+  qa_fill:
+    State: 65535
+    QA: 65535
+  bits:
+    cloud_state:
+      band: State
+      offset: 0
+      width: 2
+      keep:
+      - 0
+    cloud_shadow:
+      band: State
+      offset: 2
+      width: 1
+      keep:
+      - 0
+    land_water:
+      band: State
+      offset: 3
+      width: 3
+      keep:
+      - 1
+    aerosol_quantity:
+      band: State
+      offset: 6
+      width: 2
+      keep:
+      - 0
+      - 1
+      - 2
+    cirrus:
+      band: State
+      offset: 8
+      width: 2
+      keep:
+      - 0
+    internal_cloud:
+      band: State
+      offset: 10
+      width: 1
+      keep:
+      - 0
+    internal_fire:
+      band: State
+      offset: 11
+      width: 1
+      keep:
+      - 0
+    mod35_snow_ice:
+      band: State
+      offset: 12
+      width: 1
+      keep:
+      - 0
+    adjacent_cloud:
+      band: State
+      offset: 13
+      width: 1
+      keep:
+      - 0
+    internal_snow:
+      band: State
+      offset: 15
+      width: 1
+      keep:
+      - 0
+    modland_quality:
+      band: QA
+      offset: 0
+      width: 2
+      keep:
+      - 0
+      - 1
+    band_1_quality:
+      band: QA
+      offset: 4
+      width: 4
+      keep:
+      - 0
+    band_2_quality:
+      band: QA
+      offset: 8
+      width: 4
+      keep:
+      - 0
+    atmospheric_correction:
+      band: QA
+      offset: 12
+      width: 1
+      keep:
+      - 1
+  temporal_support: 8-day best-observation product; window median is secondary temporal
+    composite
+landsat:
+  product: LANDSAT/LC08,C09/C02/T1_L2
+  reflectance:
+    multiplier: 2.75e-05
+    additive_offset: -0.2
+    valid_dn_min: 7273
+    valid_dn_max: 43636
+    nodata_dn: 0
+  qa_pixel_invalid_bits:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  qa_pixel_water_bit:
+    offset: 7
+    exclude:
+    - 1
+  qa_radsat_valid: 0
+  landsat_8_and_9_shared_decoder: true
+  sr_qa_aerosol:
+    status: not_acquired_in_frozen_raw_assets
+    main_analysis: not_used
+    required_bits:
+    - 0
+    - 1
+    - 2
+    - 5
+    - 6
+    - 7
+    sensitivity_status: blocked_missing_raw_band
+    reason: The frozen two-band QA GeoTIFF contains QA_PIXEL and QA_RADSAT only; an
+      aerosol comparison would require re-acquisition of every original C2 L2 scene.
+fcover:
+  encoding: UInt16 DN, scale 0.004, offset 0
+  qflag: <255 after nodata exclusion
+  nobs: '>0 after nodata exclusion'
+  dataMask: project-derived native-nodata validity layer
+temporal_composite:
+  window_days_before: 15
+  window_days_after: 15
+  statistic: median
+minimum_valid_observations: 2
+footprint_minimum_valid_area: none

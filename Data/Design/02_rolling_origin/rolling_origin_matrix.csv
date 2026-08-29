@@ -1,0 +1,7 @@
+target_year,history_years,history_length,target_role,loyo
+2024,2023,1,retrospective,NOT_APPLICABLE
+2024,2022;2023,2,retrospective,PLANNED
+2024,2021;2022;2023,3,retrospective,PLANNED
+2025,2024,1,primary_independent_future_year,NOT_APPLICABLE
+2025,2023;2024,2,primary_independent_future_year,PLANNED
+2025,2022;2023;2024,3,primary_independent_future_year,PLANNED

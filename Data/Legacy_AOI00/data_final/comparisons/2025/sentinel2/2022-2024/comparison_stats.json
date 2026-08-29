@@ -1,0 +1,20 @@
+{
+  "rmse": 0.07418812811374664,
+  "mae": 0.056416284292936325,
+  "bias": -0.02613430842757225,
+  "r_squared": 0.5289611220359802,
+  "pearson_r": 0.7671994137681,
+  "valid_comparison_count": 28540,
+  "mean_reference": 0.556370198726654,
+  "mean_prediction": 0.5302358865737915,
+  "reference_standard_deviation": 0.10809510201215744,
+  "prediction_standard_deviation": 0.08664438128471375,
+  "task_id": "new-sentinel2-2022-2024",
+  "sensor": "sentinel2",
+  "strategy": "2022-2024",
+  "method": "regression",
+  "difference_definition": "model_prediction_minus_fcover_reference",
+  "clipped_low_count": 0,
+  "clipped_high_count": 0,
+  "common_evaluation_mask_checksum": "a540cc82c5be604e850c9d1aad6fa78d67e069cbd85de06e542d0459c31110a7"
+}

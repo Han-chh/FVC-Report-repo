@@ -1,0 +1,10 @@
+workspace_root: /absolute/path/to/FVC-model
+legacy_raw_root: /absolute/path/to/immutable/qh-fvc-data
+new_experiment_root: report/publication/new_experiments
+cache_root: report/publication/new_experiments/data/raw_or_cached
+external_native_data_root: /Volumes/EXTERNAL_DRIVE/FVC data
+local_manifest_root: report/publication/new_experiments/data/manifests
+credential_env_file: model/.env
+credentials:
+  policy: environment_only
+  tracked_secret_files_forbidden: true

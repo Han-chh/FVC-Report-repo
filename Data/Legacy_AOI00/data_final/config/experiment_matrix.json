@@ -1,0 +1,128 @@
+[
+  {
+    "task_id": "new-sentinel2-2022",
+    "sensor": "sentinel2",
+    "strategy": "2022",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-2023",
+    "sensor": "sentinel2",
+    "strategy": "2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-2024",
+    "sensor": "sentinel2",
+    "strategy": "2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-2022-2023",
+    "sensor": "sentinel2",
+    "strategy": "2022-2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-2023-2024",
+    "sensor": "sentinel2",
+    "strategy": "2023-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-2022-2024",
+    "sensor": "sentinel2",
+    "strategy": "2022-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2022",
+    "sensor": "landsat",
+    "strategy": "2022",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2023",
+    "sensor": "landsat",
+    "strategy": "2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2024",
+    "sensor": "landsat",
+    "strategy": "2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2022-2023",
+    "sensor": "landsat",
+    "strategy": "2022-2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2023-2024",
+    "sensor": "landsat",
+    "strategy": "2023-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-landsat-2022-2024",
+    "sensor": "landsat",
+    "strategy": "2022-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2022",
+    "sensor": "modis",
+    "strategy": "2022",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2023",
+    "sensor": "modis",
+    "strategy": "2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2024",
+    "sensor": "modis",
+    "strategy": "2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2022-2023",
+    "sensor": "modis",
+    "strategy": "2022-2023",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2023-2024",
+    "sensor": "modis",
+    "strategy": "2023-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-modis-2022-2024",
+    "sensor": "modis",
+    "strategy": "2022-2024",
+    "method": "regression"
+  },
+  {
+    "task_id": "new-sentinel2-formula-p5-p95",
+    "sensor": "sentinel2",
+    "strategy": "formula-p5-p95",
+    "method": "formula"
+  },
+  {
+    "task_id": "new-landsat-formula-p5-p95",
+    "sensor": "landsat",
+    "strategy": "formula-p5-p95",
+    "method": "formula"
+  },
+  {
+    "task_id": "new-modis-formula-p5-p95",
+    "sensor": "modis",
+    "strategy": "formula-p5-p95",
+    "method": "formula"
+  }
+]

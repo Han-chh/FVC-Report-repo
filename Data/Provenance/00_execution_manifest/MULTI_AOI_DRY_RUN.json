@@ -1,0 +1,704 @@
+{
+  "design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+  "processing_hash": "3fab57b81623045f745beeaa0c1615c51b0d44344beaa74a1025ee4450b699c7",
+  "gate_status": "PASS",
+  "expected_runs": [
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "sentinel2",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "landsat",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-00",
+      "sensor": "modis",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "sentinel2",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "landsat",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-01",
+      "sensor": "modis",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "sentinel2",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "landsat",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-02",
+      "sensor": "modis",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "sentinel2",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "landsat",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2022",
+      "train_years": [
+        2022
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2023",
+      "train_years": [
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2024",
+      "train_years": [
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2022_2023",
+      "train_years": [
+        2022,
+        2023
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2023_2024",
+      "train_years": [
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    },
+    {
+      "aoi": "AOI-03",
+      "sensor": "modis",
+      "window": "W2022_2024",
+      "train_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "target_year": 2025
+    }
+  ],
+  "scientific_results_executed": false
+}

@@ -1,0 +1,44 @@
+geometry_template: report/data_final/aoi.geojson
+geometry_rule: translate AOI-00 shape in local azimuthal-equidistant metres; preserve size and orientation
+centres_epsg4326:
+  AOI-C01: [101.40, 37.50]
+  AOI-C02: [100.10, 36.20]
+  AOI-C03: [98.40, 36.20]
+  AOI-C04: [99.30, 35.30]
+  AOI-C05: [98.20, 34.70]
+  AOI-C06: [96.80, 33.20]
+  AOI-C07: [95.60, 32.90]
+  AOI-C08: [95.80, 34.20]
+  AOI-C09: [97.20, 35.70]
+  AOI-C10: [93.50, 36.50]
+selection_features:
+  - elevation_median_m
+  - elevation_iqr_m
+  - slope_median_degrees
+  - terrain_ruggedness_m
+  - tree_fraction
+  - shrub_fraction
+  - grassland_fraction
+  - bare_sparse_fraction
+  - historical_ndvi_median
+  - historical_ndvi_iqr
+eligibility:
+  maximum_water_fraction: 0.10
+  maximum_snow_ice_fraction: 0.10
+  maximum_cropland_fraction: 0.20
+  maximum_built_fraction: 0.02
+  minimum_vegetation_plus_bare_fraction: 0.70
+  minimum_centroid_separation_from_aoi00_km: 75
+  minimum_pairwise_selected_centroid_separation_km: 150
+selection_algorithm: anchored_greedy_maximin
+selection_count: 3
+forbidden_inputs:
+  - model_results
+  - OLS_coefficients
+  - RMSE
+  - MAE
+  - Bias
+  - R2
+  - Pearson_r
+  - 2025_FCOVER
+

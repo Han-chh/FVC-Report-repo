@@ -1,0 +1,34 @@
+years:
+- 2022
+- 2023
+- 2024
+- 2025
+target_dates:
+- 07-20
+- 07-31
+- 08-10
+window_days_before: 15
+window_days_after: 15
+temporal_composite: median
+minimum_valid_observations: 2
+footprint_minimum_valid_area: none
+support: FCOVER native 300m footprint
+aggregation: area-weighted mean through raster average resampling to native footprint
+random_seed: 42
+aoi: data/aoi.geojson (asset checksum in manifest)
+products:
+  sentinel2:
+    id: COPERNICUS/S2_SR_HARMONIZED
+    version: Harmonized L2A
+    scale: 0.0001
+    offset: 0.0
+  landsat:
+    id: LANDSAT/LC08,C09/C02/T1_L2
+    version: Collection 2 L2
+    scale: 2.75e-05
+    offset: -0.2
+  modis:
+    id: MODIS/061/MOD09Q1
+    version: '061'
+    scale: 0.0001
+    offset: 0.0

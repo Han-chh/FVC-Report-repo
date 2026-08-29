@@ -1,0 +1,267 @@
+{
+  "processing_hash": "3fab57b81623045f745beeaa0c1615c51b0d44344beaa74a1025ee4450b699c7",
+  "payload": {
+    "design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+    "source_manifest_revision": "final-source-scenes-r2-asset-verified",
+    "source_manifest_index_hash": "5e540a8989571fa56ebd28171ecfe188c48eef1a63c36493c2c22568088cf250",
+    "collections": {
+      "sentinel2": {
+        "product": "COPERNICUS/S2_SR_HARMONIZED",
+        "cloud_probability_product": "COPERNICUS/S2_CLOUD_PROBABILITY",
+        "red_band": "B4",
+        "nir_band": "B8",
+        "scale": 0.0001,
+        "offset": 0.0,
+        "valid_dn": [
+          1,
+          10000
+        ],
+        "excluded_scl": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "cloud_probability_exclude_gte": 30,
+        "cloud_probability_missing": "fail_observation"
+      },
+      "landsat": {
+        "product": [
+          "LANDSAT/LC08/C02/T1_L2",
+          "LANDSAT/LC09/C02/T1_L2"
+        ],
+        "red_band": "SR_B4",
+        "nir_band": "SR_B5",
+        "scale": 2.75e-05,
+        "offset": -0.2,
+        "valid_dn": [
+          7273,
+          43636
+        ],
+        "qa_pixel_invalid_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "qa_radsat_required": 0,
+        "platform_availability": {
+          "2021": [
+            "LANDSAT_8"
+          ],
+          "2022": [
+            "LANDSAT_8",
+            "LANDSAT_9"
+          ],
+          "2023": [
+            "LANDSAT_8",
+            "LANDSAT_9"
+          ],
+          "2024": [
+            "LANDSAT_8",
+            "LANDSAT_9"
+          ],
+          "2025": [
+            "LANDSAT_8",
+            "LANDSAT_9"
+          ]
+        }
+      },
+      "modis": {
+        "product": "MODIS/061/MOD09Q1",
+        "red_band": "sur_refl_b01",
+        "nir_band": "sur_refl_b02",
+        "temporal_support": "8-day best observation",
+        "scale": 0.0001,
+        "offset": 0.0,
+        "valid_dn": [
+          -100,
+          16000
+        ],
+        "nodata_dn": -28672,
+        "state_qa": {
+          "cloud_state": {
+            "offset": 0,
+            "width": 2,
+            "keep": [
+              0
+            ]
+          },
+          "cloud_shadow": {
+            "offset": 2,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          },
+          "land_water": {
+            "offset": 3,
+            "width": 3,
+            "keep": [
+              1
+            ]
+          },
+          "aerosol_quantity": {
+            "offset": 6,
+            "width": 2,
+            "keep": [
+              0,
+              1,
+              2
+            ]
+          },
+          "cirrus": {
+            "offset": 8,
+            "width": 2,
+            "keep": [
+              0
+            ]
+          },
+          "internal_cloud": {
+            "offset": 10,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          },
+          "internal_fire": {
+            "offset": 11,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          },
+          "mod35_snow_ice": {
+            "offset": 12,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          },
+          "adjacent_cloud": {
+            "offset": 13,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          },
+          "internal_snow": {
+            "offset": 15,
+            "width": 1,
+            "keep": [
+              0
+            ]
+          }
+        },
+        "qc_250m": {
+          "modland_quality": {
+            "offset": 0,
+            "width": 2,
+            "keep": [
+              0,
+              1
+            ]
+          },
+          "band_1_quality": {
+            "offset": 4,
+            "width": 4,
+            "keep": [
+              0
+            ]
+          },
+          "band_2_quality": {
+            "offset": 8,
+            "width": 4,
+            "keep": [
+              0
+            ]
+          },
+          "atmospheric_correction": {
+            "offset": 12,
+            "width": 1,
+            "keep": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "fcover": {
+      "product": "Copernicus FCOVER 300m V2 RT6",
+      "product_version_observed": "V2.0.1",
+      "encoding": {
+        "dtype": "UInt16",
+        "scale": 0.004,
+        "offset": 0.0,
+        "nodata": 65535
+      },
+      "product_provided_quality_fields": [
+        "QFLAG",
+        "NOBS"
+      ],
+      "derived_validity_domain": {
+        "api_name": "valid_domain_mask",
+        "source": "source_nodata_and_raster_validity_semantics",
+        "interpretation": "identifies_valid_fcover_support_cells_only",
+        "not_a_source_band": true,
+        "not_an_independent_quality_flag": true
+      },
+      "baseline_predicates": [
+        "FCOVER_DN != nodata",
+        "QFLAG != nodata",
+        "NOBS != nodata",
+        "valid_domain_mask == 1",
+        "QFLAG < 255",
+        "NOBS > 0",
+        "0 <= FCOVER_DN * 0.004 <= 1"
+      ]
+    },
+    "processing_order": [
+      "reflectance_scaling",
+      "native_qa",
+      "source_pixel_ndvi",
+      "average_to_native_fcover_grid",
+      "temporal_nanmedian_on_fcover_grid"
+    ],
+    "minimum_contributions": 2,
+    "temporal_window": {
+      "before": 15,
+      "after": 15,
+      "inclusive": true
+    },
+    "modis_rule": "8-day_best_observation_with_support_interval_overlapping_nominal_window",
+    "grid": {
+      "product": "Copernicus FCOVER 300m V2 RT6",
+      "grid": "native_product_grid",
+      "crs": "EPSG:4326",
+      "nominal_resolution_degrees": [
+        0.002976190476204,
+        0.00297619047619
+      ],
+      "resample_fcover": false,
+      "extra_coverage_threshold": null
+    },
+    "block": {
+      "size_m": 5000,
+      "crs": "EPSG:32647",
+      "origin_xy_m": [
+        525000,
+        4195000
+      ]
+    },
+    "execution_contract_version": "scientific_execution_v1"
+  },
+  "status": "ACTIVE_INPUT_PREPARATION_IDENTITY",
+  "code_hash": "17195f6b527212149944883ecc79274c06d3d1682cc27df807486ebde67f8181",
+  "scientific_models_run": false,
+  "remediation_updated_at": "2026-08-11T13:39:27.427079+00:00",
+  "remediation_scope": "implementation_contract_only"
+}

@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-11T15:32:00.148875+00:00",
+  "status": "PASS",
+  "checks": {
+    "design_hash_unchanged": true,
+    "processing_hash_unchanged": true,
+    "multi_expected_72": true,
+    "multi_observed_72": true,
+    "multi_exact_mapping": true,
+    "rolling_expected_72": true,
+    "rolling_observed_72": true,
+    "rolling_exact_mapping": true,
+    "run_level_required_metrics_complete": true,
+    "block_rows_nonempty": true,
+    "block_identity_unique": true,
+    "block_namespace_valid": true,
+    "rolling_chronology_valid": true,
+    "source_lineage_complete": true
+  },
+  "multi_aoi": {
+    "expected": 72,
+    "completed": 72,
+    "validated": 72,
+    "failed": 0,
+    "missing": 0,
+    "duplicate": 0
+  },
+  "rolling_origin": {
+    "expected": 72,
+    "completed": 72,
+    "validated": 72,
+    "failed": 0,
+    "missing": 0,
+    "duplicate": 0
+  },
+  "diagnostic_nonfailures": {
+    "groupkfold_undefined_Pearson_r_zero_variance": 2,
+    "loyo_not_applicable_single_year_windows": 36
+  },
+  "design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+  "processing_hash": "3fab57b81623045f745beeaa0c1615c51b0d44344beaa74a1025ee4450b699c7",
+  "integrity": {
+    "protected_expected": 84,
+    "protected_verified": 84,
+    "protected_failures": [],
+    "active_gee_tasks": [],
+    "manuscript_files_modified": []
+  }
+}

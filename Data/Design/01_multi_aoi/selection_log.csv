@@ -1,0 +1,4 @@
+step,selected_candidate,minimum_environmental_distance,minimum_geographic_distance_km,distance_rule_met
+1,AOI-C10,6.279590477492674,559.8462073199821,True
+2,AOI-C07,5.834261354552182,443.262179266023,True
+3,AOI-C09,4.378376625680468,331.4556834513436,True

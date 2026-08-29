@@ -1,0 +1,17 @@
+{
+  "revision": "final-source-scenes-r2-asset-verified",
+  "generated_at": "2026-08-11T10:58:34.276539+00:00",
+  "root": "report/publication/new_experiments/08_scientific_execution/00_execution_manifest/source_scenes/active_r2",
+  "index_hash": "1ca65b1c51cd85a8737710484c17849d694864255893987baa89e0a152ba7159",
+  "design_hash": "b21c8cc7f3d4d35e1db4dfa1c8245ff10ba657c0a0a001992b552808766cc49b",
+  "counts": {
+    "sentinel2": 807,
+    "landsat": 765,
+    "modis": 420
+  },
+  "unique_source_assets_verified": 559,
+  "unique_cloud_assets_verified": 268,
+  "missing_cloud_partners_excluded": 1,
+  "legacy_manifests_preserved": true,
+  "models_run": false
+}

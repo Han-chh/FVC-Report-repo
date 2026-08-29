@@ -1,0 +1,44 @@
+{
+  "task_id": "new-sentinel2-2022-2024",
+  "sensor": "sentinel2",
+  "method": "ordinary_least_squares_intercept",
+  "slope_a": 0.5519902110099792,
+  "intercept_b": 0.2104538083076477,
+  "training_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "year_sample_counts": {
+    "2022": 26583,
+    "2023": 30229,
+    "2024": 23655
+  },
+  "total_training_samples": 80467,
+  "training_input_checksum": "891c379ac74f9f2c134b2ce5859b431013545bf5b035ed455e294a78294416c7",
+  "data_config_hash": "f11871b0cab9e78afd499cc23a4f9a106b6ba9448ff313b3ed91d83ec7716beb",
+  "qa_config_hash": "0909096b4ec2554e55705d25a822e1c1d912cb3dc73d579e3026d4be3f239912",
+  "spatial_aggregation": "FCOVER native 300m footprint mean/support",
+  "spatial_group_count": 45,
+  "training_metrics": {
+    "rmse": 0.06608670949935913,
+    "mae": 0.049695320427417755,
+    "bias": 2.3328973952629894e-07,
+    "r_squared": 0.6128349304199219,
+    "pearson_r": 0.782837733674321,
+    "valid_comparison_count": 80467,
+    "mean_reference": 0.5199605226516724,
+    "mean_prediction": 0.5199607610702515,
+    "reference_standard_deviation": 0.10621015727519989,
+    "prediction_standard_deviation": 0.08314322680234909
+  },
+  "raw_prediction_range": [
+    -0.02254733443260193,
+    0.6801820397377014
+  ],
+  "raw_below_zero_ratio": 1.2427454732996136e-05,
+  "raw_above_one_ratio": 0.0,
+  "clip_ratio": 1.2427454732996136e-05,
+  "created_at": "2026-08-04T08:42:39.336283+00:00",
+  "code_commit": "9c3ce1022e0cba15cc18585ab129b4ae7b2546db"
+}

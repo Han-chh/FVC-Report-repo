@@ -1,0 +1,7 @@
+{
+  "task_id": "new-modis-2022-2024",
+  "status": "completed",
+  "input_ndvi_checksum": "8ae2a843a063b1db255b3679668fc1f84676ef07ebe5351e220db843129d9167",
+  "evaluation_mask_checksum": "b9374536b152093b1c881ddc9e5c291fed43a39e7f441e9252b1fcdd3ad8edd8",
+  "model_manifest": "models/modis/2022-2024/model-manifest.json"
+}

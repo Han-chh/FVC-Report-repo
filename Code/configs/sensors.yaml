@@ -1,0 +1,59 @@
+sentinel2:
+  product: COPERNICUS/S2_SR_HARMONIZED
+  processing_level: L2A surface reflectance
+  red_band: B4
+  nir_band: B8
+  native_resolution_m: 10
+  scale: 0.0001
+  offset: 0.0
+  valid_dn: [1, 10000]
+  nodata_dn: 0
+  excluded_scl: [0, 1, 2, 3, 6, 8, 9, 10, 11]
+  cloud_probability_exclude_gte: 30
+  cloud_probability_missing: fail_observation
+landsat:
+  product: [LANDSAT/LC08/C02/T1_L2, LANDSAT/LC09/C02/T1_L2]
+  processing_level: Collection 2 Level-2 Tier 1 surface reflectance
+  red_band: SR_B4
+  nir_band: SR_B5
+  native_resolution_m: 30
+  scale: 0.0000275
+  offset: -0.2
+  valid_dn: [7273, 43636]
+  nodata_dn: 0
+  qa_pixel_invalid_bits: [0, 1, 2, 3, 4, 5, 7]
+  qa_radsat_required: 0
+  sr_qa_aerosol: not_acquired_not_used
+  platform_availability:
+    2021: [LANDSAT_8]
+    2022: [LANDSAT_8, LANDSAT_9]
+    2023: [LANDSAT_8, LANDSAT_9]
+    2024: [LANDSAT_8, LANDSAT_9]
+    2025: [LANDSAT_8, LANDSAT_9]
+modis:
+  product: MODIS/061/MOD09Q1
+  red_band: sur_refl_b01
+  nir_band: sur_refl_b02
+  native_resolution_m: 250
+  temporal_support: 8-day best observation
+  scale: 0.0001
+  offset: 0.0
+  valid_dn: [-100, 16000]
+  nodata_dn: -28672
+  state_qa:
+    cloud_state: {offset: 0, width: 2, keep: [0]}
+    cloud_shadow: {offset: 2, width: 1, keep: [0]}
+    land_water: {offset: 3, width: 3, keep: [1]}
+    aerosol_quantity: {offset: 6, width: 2, keep: [0, 1, 2]}
+    cirrus: {offset: 8, width: 2, keep: [0]}
+    internal_cloud: {offset: 10, width: 1, keep: [0]}
+    internal_fire: {offset: 11, width: 1, keep: [0]}
+    mod35_snow_ice: {offset: 12, width: 1, keep: [0]}
+    adjacent_cloud: {offset: 13, width: 1, keep: [0]}
+    internal_snow: {offset: 15, width: 1, keep: [0]}
+  qc_250m:
+    modland_quality: {offset: 0, width: 2, keep: [0, 1]}
+    band_1_quality: {offset: 4, width: 4, keep: [0]}
+    band_2_quality: {offset: 8, width: 4, keep: [0]}
+    atmospheric_correction: {offset: 12, width: 1, keep: [1]}
+

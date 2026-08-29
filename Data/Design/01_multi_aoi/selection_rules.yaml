@@ -1,0 +1,14 @@
+frozen_before_model_execution: true
+geometry: translated_AOI00_shape_equal_area
+features: [elevation_median_m, elevation_iqr_m, slope_median_degrees, terrain_ruggedness_m, tree_fraction, shrub_fraction, grassland_fraction, bare_sparse_fraction, historical_ndvi_median, historical_ndvi_iqr]
+eligibility:
+  water_fraction_max: 0.10
+  snow_ice_fraction_max: 0.10
+  cropland_fraction_max: 0.20
+  built_fraction_max: 0.02
+  vegetation_plus_bare_fraction_min: 0.70
+  distance_from_AOI00_km_min: 75
+  historical_ndvi_years_required: 4
+selection: {algorithm: anchored_greedy_maximin, selected_candidates: 3, pairwise_centroid_separation_km_min_when_feasible: 150}
+forbidden: [model_results, OLS, RMSE, MAE, Bias, R2, Pearson_r, 2025_FCOVER]
+

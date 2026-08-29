@@ -1,0 +1,20 @@
+{
+  "rmse": 0.23001823217829195,
+  "mae": 0.2012935478341745,
+  "bias": 0.11837521985720606,
+  "r_squared": -3.528063200176706,
+  "pearson_r": 0.7487633611933662,
+  "valid_comparison_count": 28540,
+  "mean_reference": 0.556370198726654,
+  "mean_prediction": 0.6747453924027641,
+  "reference_standard_deviation": 0.10809510201215744,
+  "prediction_standard_deviation": 0.2646821678309555,
+  "task_id": "new-sentinel2-formula-p5-p95",
+  "sensor": "sentinel2",
+  "strategy": "formula-p5-p95",
+  "method": "formula",
+  "difference_definition": "model_prediction_minus_fcover_reference",
+  "clipped_low_count": 1427,
+  "clipped_high_count": 1427,
+  "common_evaluation_mask_checksum": "a540cc82c5be604e850c9d1aad6fa78d67e069cbd85de06e542d0459c31110a7"
+}

@@ -1,0 +1,9 @@
+frozen_on: 2026-08-10
+selection_used_model_performance: false
+registry: report/publication/new_experiments/01_multi_aoi/final_four_aoi_registry.geojson
+aois:
+  AOI-00: {source: original_immutable, source_candidate: AOI-00}
+  AOI-01: {source: environmental_maximin, source_candidate: AOI-C10}
+  AOI-02: {source: environmental_maximin, source_candidate: AOI-C07}
+  AOI-03: {source: environmental_maximin, source_candidate: AOI-C09}
+
