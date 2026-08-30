@@ -1,0 +1,20 @@
+sensitivity_name: spatial_aggregation_order
+version: 1
+primary_analysis_commit: 624c682
+source_dataset: native_QA_retained_reflectance_from_frozen_source_scenes
+output_root: Data/Additional Sensitivity Analysis/Aggregation Order
+dry_run: true
+full_run: false
+aggregation_route: reflectance_first
+reducer: mask_aware_mean
+target_grid: Copernicus_FCOVER_V2_RT6_native_300m_grid
+denominator_tolerance: 0.0
+minimum_contributions: 2
+matched_native_support: require_primary_QA_retained_RED_and_NIR_intersection
+future_outputs:
+  matched_ndvi_order_comparison: final/matched_ndvi_order_comparison.parquet
+  ndvi_difference_summary: final/ndvi_difference_summary.csv
+  paired_ndvi_fcover_reflectance_first: final/paired_ndvi_fcover_reflectance_first.parquet
+  multi_aoi_metrics_by_order: final/multi_aoi_metrics_by_order.csv
+  rolling_origin_metrics_by_order: final/rolling_origin_metrics_by_order.csv
+  block_contrasts_by_order: final/block_contrasts_by_order.csv

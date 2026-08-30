@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-30T07:13:32.294688+00:00",
+  "git_commit": "aef012d046ff2a69df905fb91a7a67a33ace5820",
+  "config_hash": "fadede8c9a66ca6999da9e34cffce7bde6190fd6fa581a583ebc91eec25aa256",
+  "materialization_mode": "frozen_primary_canonical_adapter",
+  "source_sha256": "cb439b63d5d346abdc8d2b8bf0e1a2204045c784e73ab8225e67c4fa47cbccfb",
+  "rows": 267762,
+  "output_sha256": "bb1480912d6245c3b4cb8f47ebfe35c8d4fc1053f798052cfc8d36a078639154",
+  "status": "COMPLETED"
+}

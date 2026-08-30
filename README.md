@@ -44,6 +44,29 @@ No credentials, access tokens, personal data, or unpublished field observations 
 
 The `Data/Legacy_AOI00/` branch is intentionally separate. It supports the legacy AOI-00 DPM consistency check documented in `Data/DPM_stage2/`; it is not a substitute for the frozen four-AOI main-analysis input.
 
+## Additional Sensitivity Analyses
+
+Three reproducible sensitivity pipelines are implemented in
+`Code/Additional Sensitivity Analysis/`: non-overlapping temporal composition,
+Landsat `SR_QA_AEROSOL` filtering, and NDVI-before-versus-after aggregation
+order. All three production runs are complete and isolated under
+`Data/Additional Sensitivity Analysis/`; the frozen primary inputs and results
+remain unchanged. The hard-gate result is
+`Data/Additional Sensitivity Analysis/Combined/MANUSCRIPT_INTEGRATION_READY.md`.
+
+The checkpointed production entry points are:
+
+```bash
+PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/non_overlapping_temporal/run_temporal_sensitivity.py" --run-core-evaluation
+PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/landsat_aerosol_qa/run_aerosol_sensitivity.py" --run-core-evaluation
+PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/finalize_sensitivity_results.py" combined
+```
+
+Materialization writes atomic per-sensor/AOI/year checkpoints and resumes only
+valid completed checkpoints. Validation reports and final sensitivity tables
+are in each sensitivity directory; the five manuscript-integration artefacts
+are in `Data/Additional Sensitivity Analysis/Combined/`.
+
 ## Citation
 
 Please cite the associated manuscript and this repository version (commit hash or release tag) when using these materials. A formal software/data license has not yet been selected; reuse beyond review and scholarly verification requires the author's permission.

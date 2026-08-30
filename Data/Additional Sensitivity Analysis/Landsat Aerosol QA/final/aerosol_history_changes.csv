@@ -1,0 +1,17 @@
+aerosol_mode,AOI,sensor,primary_history,primary_preferred_RMSE,sensitivity_history,sensitivity_preferred_RMSE,history_changed,rolling_origin_direction_changed
+primary_no_aerosol_filter,AOI-00,landsat,W2023,0.047622661005005715,W2023,0.047622661005005715,False,False
+primary_no_aerosol_filter,AOI-01,landsat,W2023,0.0013556186888521898,W2023,0.0013556186888521898,False,False
+primary_no_aerosol_filter,AOI-02,landsat,W2022,0.05642310551500826,W2022,0.05642310551500826,False,False
+primary_no_aerosol_filter,AOI-03,landsat,W2022,0.03525327081797775,W2022,0.03525327081797775,False,False
+exclude_high_aerosol,AOI-00,landsat,W2023,0.047622661005005715,W2023,0.04642176733637045,False,False
+exclude_high_aerosol,AOI-01,landsat,W2023,0.0013556186888521898,W2023,0.0012948349151445898,False,True
+exclude_high_aerosol,AOI-02,landsat,W2022,0.05642310551500826,W2022_2024,0.06470729896561789,True,False
+exclude_high_aerosol,AOI-03,landsat,W2022,0.03525327081797775,W2022,0.03497827342443329,False,True
+valid_retrieval_no_high,AOI-00,landsat,W2023,0.047622661005005715,W2023,0.04820729284722125,False,False
+valid_retrieval_no_high,AOI-01,landsat,W2023,0.0013556186888521898,W2023,0.0012501862299808364,False,True
+valid_retrieval_no_high,AOI-02,landsat,W2022,0.05642310551500826,W2024,0.07336535058616363,True,True
+valid_retrieval_no_high,AOI-03,landsat,W2022,0.03525327081797775,W2022,0.03586150064232016,False,True
+strict_aerosol,AOI-00,landsat,W2023,0.047622661005005715,W2023,0.05410337362401593,False,True
+strict_aerosol,AOI-01,landsat,W2023,0.0013556186888521898,W2024,0.0014596118008602787,True,True
+strict_aerosol,AOI-02,landsat,W2022,0.05642310551500826,W2024,0.07907776566487458,True,True
+strict_aerosol,AOI-03,landsat,W2022,0.03525327081797775,W2022,0.037962310281169254,False,True

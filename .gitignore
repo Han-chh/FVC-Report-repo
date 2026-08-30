@@ -4,3 +4,11 @@ __pycache__/
 .pytest_cache/
 .venv/
 reproduction_output/
+
+# Sensitivity-analysis Earth Engine checkpoints and large canonical pair caches
+# remain local; compact final summaries and validation reports are versioned.
+Data/Additional Sensitivity Analysis/**/intermediate/
+Data/Additional Sensitivity Analysis/**/logs/
+Data/Additional Sensitivity Analysis/**/manifests/
+Data/Additional Sensitivity Analysis/**/final/paired_ndvi_fcover*.csv
+Data/Additional Sensitivity Analysis/execution_audit/
