@@ -7,13 +7,13 @@ Matched Route A/Route B mean absolute ΔNDVI spans 0.000101477 to 0.00686362; op
 
 ## B — Non-overlapping Temporal
 
-Source assignment retention spans 0.857143 to 1; duplicate source identities are zero. Operational ΔRMSE spans -0.000145751 to 0.00970254; matched-support ΔRMSE spans 2.10463e-05 to 0.0177631.
+Source assignment retention spans 0.857143 to 1; duplicate source identities are zero. Operational ΔRMSE spans -0.00231886 to 0.0140516; matched-support ΔRMSE spans -0.000899932 to 0.0177631.
 Preferred-history changes: 7; rolling-direction changes: 3. The overlapping primary temporal design changes some numerical estimates and preferences but does not materially change the conclusion classifications.
 
 ## C — Landsat Aerosol QA
 
 Valid modes were primary_no_aerosol_filter, exclude_high_aerosol, valid_retrieval_no_high, and strict_aerosol.
-Canonical paired-identity retention spans 0.355383 to 1; operational ΔRMSE spans -0.00120089 to 0.0270358; matched-support ΔRMSE spans -0.00120787 to 0.0339962.
+Canonical paired-identity retention spans 0.355383 to 1; operational ΔRMSE spans -0.00396904 to 0.0270358; matched-support ΔRMSE spans -0.00183726 to 0.0339962.
 AOI-specific history exceptions: strict_aerosol/AOI-01; exclude_high_aerosol/AOI-02; strict_aerosol/AOI-02; valid_retrieval_no_high/AOI-02. Rolling-direction exceptions: strict_aerosol/AOI-00; exclude_high_aerosol/AOI-01; strict_aerosol/AOI-01; valid_retrieval_no_high/AOI-01; strict_aerosol/AOI-02; valid_retrieval_no_high/AOI-02; exclude_high_aerosol/AOI-03; strict_aerosol/AOI-03; valid_retrieval_no_high/AOI-03.
 Preferred-history changes: 4; rolling-direction changes: 9.
 

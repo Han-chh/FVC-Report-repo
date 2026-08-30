@@ -497,6 +497,7 @@ def build_combined() -> None:
     temporal = _summary_from_comparison(pd.read_csv(TEMP_ROOT / "final/temporal_multi_aoi_metrics.csv"), sensitivity_name="non_overlapping_temporal")
     aerosol = _summary_from_comparison(pd.read_csv(AEROSOL_ROOT / "final/aerosol_multi_aoi_metrics.csv"), sensitivity_name="landsat_aerosol_qa", variant_column="aerosol_mode")
     temporal_history = pd.read_csv(TEMP_ROOT / "final/temporal_history_changes.csv")
+    temporal_all_metrics = pd.read_csv(TEMP_ROOT / "final/temporal_multi_aoi_metrics.csv")
     temporal = temporal.drop(columns=[column for column in ("primary_history", "sensitivity_history", "history_changed", "rolling_origin_direction_changed") if column in temporal])
     temporal = temporal.merge(temporal_history[["AOI", "sensor", "primary_history", "sensitivity_history", "history_changed", "rolling_origin_direction_changed"]],
                               on=["AOI", "sensor"], validate="one_to_one")
@@ -504,6 +505,7 @@ def build_combined() -> None:
         block_contrast_direction_changes=("block_contrast_direction_changed", "sum"))
     temporal = temporal.merge(temporal_blocks, on=["AOI", "sensor"], validate="one_to_one")
     aerosol_history = pd.read_csv(AEROSOL_ROOT / "final/aerosol_history_changes.csv")
+    aerosol_all_metrics = pd.read_csv(AEROSOL_ROOT / "final/aerosol_multi_aoi_metrics.csv")
     aerosol = aerosol.drop(columns=[column for column in ("primary_history", "sensitivity_history", "history_changed", "rolling_origin_direction_changed") if column in aerosol])
     aerosol = aerosol.merge(aerosol_history[["aerosol_mode", "AOI", "sensor", "primary_history", "sensitivity_history", "history_changed", "rolling_origin_direction_changed"]],
                             on=["aerosol_mode", "AOI", "sensor"], validate="one_to_one")
@@ -588,11 +590,11 @@ def build_combined() -> None:
               "Route A reproduced the frozen primary result at 100.00% (13/13), and Route B completed 60/60 checkpoints.",
               f"Matched Route A/Route B mean absolute ΔNDVI spans {rng(agg, 'delta_NDVI_abs_mean')}; operational ΔRMSE spans {rng(agg, 'delta_RMSE_operational')}. Preferred-history changes: {int(agg.history_changed.sum())}; rolling-direction changes: {int(agg.rolling_origin_direction_changed.sum())}.",
               "", "## B — Non-overlapping Temporal", "",
-              f"Source assignment retention spans {rng(temporal_support, 'retention_fraction')}; duplicate source identities are zero. Operational ΔRMSE spans {rng(temporal, 'delta_RMSE_operational')}; matched-support ΔRMSE spans {rng(temporal, 'delta_RMSE_matched')}.",
+              f"Source assignment retention spans {rng(temporal_support, 'retention_fraction')}; duplicate source identities are zero. Operational ΔRMSE spans {rng(temporal_all_metrics, 'delta_RMSE_operational')}; matched-support ΔRMSE spans {rng(temporal_all_metrics, 'delta_RMSE_matched')}.",
               f"Preferred-history changes: {int(temporal.history_changed.sum())}; rolling-direction changes: {int(temporal.rolling_origin_direction_changed.sum())}. The overlapping primary temporal design changes some numerical estimates and preferences but does not materially change the conclusion classifications.", "",
               "## C — Landsat Aerosol QA", "",
               "Valid modes were primary_no_aerosol_filter, exclude_high_aerosol, valid_retrieval_no_high, and strict_aerosol.",
-              f"Canonical paired-identity retention spans {rng(aerosol_retention, 'retention_fraction')}; operational ΔRMSE spans {rng(aerosol, 'delta_RMSE_operational')}; matched-support ΔRMSE spans {rng(aerosol, 'delta_RMSE_matched')}.",
+              f"Canonical paired-identity retention spans {rng(aerosol_retention, 'retention_fraction')}; operational ΔRMSE spans {rng(aerosol_all_metrics, 'delta_RMSE_operational')}; matched-support ΔRMSE spans {rng(aerosol_all_metrics, 'delta_RMSE_matched')}.",
               f"AOI-specific history exceptions: {aerosol_history_exceptions}. Rolling-direction exceptions: {aerosol_rolling_exceptions}.",
               f"Preferred-history changes: {int(aerosol.history_changed.sum())}; rolling-direction changes: {int(aerosol.rolling_origin_direction_changed.sum())}.", "",
               "## D — Overall robustness", "",
