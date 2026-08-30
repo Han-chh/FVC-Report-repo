@@ -1,0 +1,23 @@
+\documentclass[a4paper,10pt,landscape]{article}
+\usepackage{amsmath,booktabs,tabularx,array,geometry,longtable,pdflscape,graphicx}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+\section*{Supplementary material}
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\input{table_S1_paired_contrasts}
+\clearpage
+\input{table_S2_loyo_summary}
+\clearpage
+\input{table_S3_reserve_summary}
+\clearpage
+\input{../../Ripple/tables/Supplementary_Table_DPM_All48}
+\clearpage
+\input{../../Ripple/tables/Supplementary_Table_Clipping}
+\clearpage
+\input{sensitivity_tables}
+\end{document}

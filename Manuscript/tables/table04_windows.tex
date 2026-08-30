@@ -1,0 +1,9 @@
+\begin{table}[!htbp]\centering\scriptsize
+\caption{Prespecified historical-window comparison. LOYO and historical spatial-reserve ranges are descriptive diagnostics and not selection criteria; lowest 2025 values are post hoc target-year descriptions, and Holm tests apply only to 2025 block RMSE.}\label{tab:windows}
+\begin{tabularx}{.99\textwidth}{L{1.45cm}L{1.85cm}L{2.05cm}L{2.15cm}L{2.25cm}Y}\toprule
+Sensor & Lowest GroupKFold & LOYO mean RMSE range & Reserve RMSE range & Lowest 2025 global RMSE & 2025 Holm-significant differences \\\midrule
+Sentinel-2 & 2023 (0.0576) & 0.0608--0.0695 & 0.0647--0.0764 & 2023--2024 (0.0737) & None of 15 \\
+Landsat 8/9 & 2023 (0.0465) & 0.0483--0.0514 & 0.0495--0.0512 & 2023 (0.0466) & 2024 worse than 2023--2024 ($p_{\mathrm{Holm}}=0.0207$) and 2022--2024 ($p_{\mathrm{Holm}}=0.0357$) \\
+MODIS & 2023 (0.0413) & 0.0437--0.0450 & 0.0421--0.0462 & 2022--2024 (0.0428) & None of 15 \\\bottomrule
+\end{tabularx}
+\end{table}

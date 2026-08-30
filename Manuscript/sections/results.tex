@@ -1,0 +1,59 @@
+\section{Results}
+\subsection{Common-target-grid FCOVER-reference agreement}
+The common-target-grid data contained 995,060 sensor-specific pairs: 367,236 Sentinel-2, 267,762 Landsat, and 360,062 MODIS. They represented 386,649 unique AOI--year--date--FCOVER-cell identities. All 60 AOI--sensor--year groups were usable; AOI-02 Landsat lacked 10 August 2021 and was not imputed. FCOVER support varied after native QA. AOI-01 was near zero in 2025 (mean 0.0003; SD 0.0017).
+
+All 72 Multi-AOI runs completed. Mean RMSE was 0.041023 for Sentinel-2, 0.036840 for Landsat, and 0.030787 for MODIS (Table~\ref{tab:multiaoi}); each is an unweighted mean of 24 run-level values. AOI mean RMSE ranged from 0.00139 to 0.05674, exceeding differences among the sensor means. AOI-01 had small absolute errors but best-window $R^2$ of 0.357--0.423, consistent with range restriction.
+
+\input{tables/table05_multi_aoi}
+
+\subsection{DPM benchmark}
+All 48 DPM configurations completed. The selected endpoint pair was P1/P99 in 9/12 sensor--AOI comparisons, P2/P98 in 2/12, and P5/P95 in 1/12 (Table~\ref{tab:formulaols}). Selected OLS RMSE was lower in all 12 comparisons. Both displayed minima were retrospectively selected as defined in Methods. DPM/OLS RMSE ratios ranged from 3.07 to 358.47; the extreme ratio is associated with near-zero AOI-01 and a very small OLS denominator, and is not a universal algorithm ranking.
+
+\input{tables/table03_formula_ols}
+
+\subsection{DPM endpoint, baseline, and clipping sensitivity}
+Across the 12 sensor--AOI groups, endpoint-driven DPM RMSE ranges were 0.0176--0.1715 (Supplementary Table S4). The selected endpoint was therefore not geographically invariant: the narrowest ranges occurred in AOI-02 (0.0176--0.0422), whereas AOI-03 had the largest ranges (0.1622--0.1715). AOI-01 was also endpoint-sensitive (0.0984--0.1471), but P1/P99 remained its best configuration for all three sensors. Its best DPM RMSE values were still 0.4215 (Sentinel-2), 0.4860 (Landsat 8/9), and 0.4303 (MODIS), with positive biases of 0.3780, 0.4497, and 0.3816. Thus changing empirical quantiles did not materially resolve AOI-01 overprediction; its restricted reference support remains consequential.
+
+For the retrospectively displayed AOI-01 OLS histories, RMSE was 0.0013--0.0014 versus 0.0018 for the zero baseline and 0.0017--0.0018 for the training-mean baseline, yielding positive RMSE skill of 0.204--0.255 (Table~\ref{tab:aoi01-baseline-clipping}). The small absolute OLS error consequently contains modest predictive skill rather than being solely a zero-dominated artefact, although its magnitude remains range-dependent. Clipping affected 36.1--64.8\% of AOI-01 raw OLS predictions and reduced OLS RMSE by only 0.000059--0.000179. The best DPM configuration clipped about 2\% of predictions, but clipping reduced its RMSE by 0.0103--0.0652; endpoint choice and clipping therefore alter the reported DPM error without changing the AOI-01 conclusion.
+
+\input{../Ripple/tables/Table_AOI01_Baseline_Clipping}
+
+\subsection{Geographic and historical dependence}
+Preferred histories differed by sensor and AOI; no geographically invariant historical window emerged. Six-window slope ranges across the 12 sensor--AOI combinations were 0.0117--0.1182 and intercept ranges were 0.0004--0.0671 (Figure~\ref{fig:coefficients}). Within fixed histories, GroupKFold slope ranges had median 0.0374 and maximum 0.1049; intercept ranges had median 0.0060 and maximum 0.0461. These are fold dispersion, not confidence intervals. AOI-01 slopes (0.051--0.110) remain weakly identifiable because its reference distribution is narrow.
+
+\begin{figure*}[!t]
+\centering\includegraphics[width=.98\textwidth]{fig04_coefficient_stability.pdf}
+\caption{Full-fit OLS slopes across six Multi-AOI histories. Grey points and segments show five existing GroupKFold fits and their ranges; they are descriptive spatial-fold dispersion, not confidence intervals. Vertical scales differ by panel.}
+\label{fig:coefficients}
+\end{figure*}
+
+\subsection{Internal diagnostics and chronological transfer}
+All applicable GroupKFold, LOYO, and historical-reserve diagnostics completed. Their broad variation by sensor and AOI produced no stable internal history ranking. The reserve was not used for tuning or inference and was recombined before the prescribed full fit; complete LOYO and reserve summaries are Supplementary Tables S2--S3.
+
+All 72 Rolling-Origin runs completed. Figure~\ref{fig:rolling} shows no uniform monotonic relation between longer histories and lower forward error. Sensor-level mean RMSE for 2024/2025 was 0.03923/0.04099 for Sentinel-2, 0.03706/0.03716 for Landsat, and 0.03305/0.03091 for MODIS (unweighted means of 12 AOI--history runs per row).
+
+\begin{figure*}[!t]
+\centering\includegraphics[width=.98\textwidth]{fig05_rolling_trajectories.pdf}
+\caption{Rolling-Origin RMSE trajectories for one- to three-year histories (H1--H3); see Methods for the temporal-compositing design.}
+\label{fig:rolling}
+\end{figure*}
+
+\subsection{Block-level contrasts}
+Paired block contrasts were heterogeneous (Figure~\ref{fig:effects}; Table~\ref{tab:contrasts}). Of 72 predefined contrasts, 39 were Holm-supported within their corresponding local families: 30 favoured lower error and 9 higher error for the longer configuration. Eleven supported AOI-01 effects had $|\Delta\mathrm{RMSE}|<0.0001$. The largest supported lower-error contrast was MODIS AOI-03, 2024 H1--H3 ($\Delta\mathrm{RMSE}=+0.007654$); the largest supported higher-error contrast was Landsat AOI-02, 2025 H1--H2 ($-0.004124$). Complete statistics for all 72 contrasts are in Supplementary Table S1.
+
+\input{tables/table08_contrasts}
+
+\begin{figure*}[!t]
+\centering\includegraphics[width=.98\textwidth]{fig06_paired_effects.pdf}
+\caption{All 72 paired block-RMSE contrasts. Positive left-minus-right values mean lower block RMSE for the longer configuration; negative values mean higher block RMSE. Filled markers denote within-family Holm support.}
+\label{fig:effects}
+\end{figure*}
+
+\subsection{Additional sensitivity analyses}
+The aggregation-order Route A reproduced the frozen primary outputs for all 13 checks, and the matched Route B comparison retained every target identity. Mean absolute matched $\Delta$NDVI ranged from 0.000101 to 0.006864; operational $\Delta$RMSE ranged from $-0.001458$ to $+0.000493$. One of 12 preferred histories changed (MODIS AOI-03), and two Rolling-Origin directions changed (both Sentinel-2). Thus the common-grid and geographic interpretations were robust to this ordering choice, although individual sensor--AOI estimates were quantitatively modified.
+
+Under nearest-nominal non-overlap, source-assignment retention was 0.857--1.000 and duplicate source identities were zero; resulting target-pair retention was 0.132--0.992. Operational $\Delta$RMSE ranged from $-0.002319$ to $+0.014052$, whereas matched-identity $\Delta$RMSE ranged from $-0.000900$ to $+0.017763$. Seven of 12 preferred histories and three Rolling-Origin directions changed. These are respectively operational and matched-support comparisons, so their differences cannot all be attributed to overlap alone; nevertheless, removing nominal-date reuse did not produce a uniform longer-history advantage.
+
+For Landsat, the valid modes were exclusion of high aerosol, valid-retrieval/no-high-aerosol, and strict valid-retrieval climatology/low-aerosol screening, each additional to the primary Level-2 surface-reflectance processing. Retention across AOI--year groups was 0.355--1.000. Operational and matched-identity $\Delta$RMSE ranges were $-0.003969$ to $+0.027036$ and $-0.001837$ to $+0.033996$, respectively; the largest increases occurred for strict screening in AOI-02 (2025 retention 0.396). Four of 12 preferred histories and nine Rolling-Origin directions changed. Additional aerosol-specific screening was therefore associated with substantial support loss and configuration-specific numerical changes, but did not alter the Landsat or cross-AOI manuscript conclusions (Table~\ref{tab:sensitivity}; Supplementary Table~S9).
+
+\input{tables/table09_sensitivity}

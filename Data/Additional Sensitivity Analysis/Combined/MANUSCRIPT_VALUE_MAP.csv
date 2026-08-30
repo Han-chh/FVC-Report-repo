@@ -1,0 +1,29 @@
+manuscript_location,metric,source_file,source_row_or_configuration,exact_value,manuscript_rounding
+Results 3.7; Table 6; Supplementary Table S7,Aggregation Route A reproduction checks,Aggregation Order/validation/PRIMARY_ROUTE_REPRODUCTION_CHECKS.csv,13 PASS checks,13,13
+Results 3.7; Table 6; Supplementary Table S7,Aggregation matched target retention,sensitivity_summary.csv,aggregation_order all 12 rows retention_fraction,1.0,1.000
+Results 3.7; Table 6,Aggregation mean absolute matched delta NDVI minimum,sensitivity_summary.csv,aggregation_order min(delta_NDVI_abs_mean),0.00010147679636249013,0.000101
+Results 3.7; Table 6,Aggregation mean absolute matched delta NDVI maximum,sensitivity_summary.csv,aggregation_order max(delta_NDVI_abs_mean),0.006863621447471391,0.006864
+Results 3.7; Table 6,Aggregation operational delta RMSE minimum,sensitivity_summary.csv,aggregation_order min(delta_RMSE_operational),-0.0014580148869529005,-0.001458
+Results 3.7; Table 6,Aggregation operational delta RMSE maximum,sensitivity_summary.csv,aggregation_order max(delta_RMSE_operational),0.000493279701540901,0.000493
+Results 3.7; Table 6,Aggregation preferred-history changes,sensitivity_summary.csv,aggregation_order sum(history_changed),1,1 of 12
+Results 3.7; Table 6,Aggregation Rolling-Origin direction changes,sensitivity_summary.csv,aggregation_order sum(rolling_origin_direction_changed),2,2 of 12
+Results 3.7; Table 6,Temporal source-assignment retention minimum,Non-overlapping Temporal/final/temporal_support_summary.csv,min(retention_fraction),0.8571428571428571,0.857
+Results 3.7; Table 6,Temporal source-assignment retention maximum,Non-overlapping Temporal/final/temporal_support_summary.csv,max(retention_fraction),1.0,1.000
+Results 3.7; Table 6,Temporal duplicate source identities,Non-overlapping Temporal/final/temporal_support_summary.csv,sum(duplicate_source_identities),0,0
+Results 3.7; Table 6,Temporal target-pair retention minimum,sensitivity_summary.csv,non_overlapping_temporal min(retention_fraction),0.1321825205214872,0.132
+Results 3.7; Table 6,Temporal target-pair retention maximum,sensitivity_summary.csv,non_overlapping_temporal max(retention_fraction),0.9917496730053326,0.992
+Results 3.7; Table 6,Temporal operational delta RMSE minimum,Non-overlapping Temporal/final/temporal_multi_aoi_metrics.csv,min(delta_RMSE_operational),-0.0023188583095984996,-0.002319
+Results 3.7; Table 6,Temporal operational delta RMSE maximum,Non-overlapping Temporal/final/temporal_multi_aoi_metrics.csv,max(delta_RMSE_operational),0.014051553817882395,0.014052
+Results 3.7; Table 6,Temporal matched delta RMSE minimum,Non-overlapping Temporal/final/temporal_multi_aoi_metrics.csv,min(delta_RMSE_matched),-0.0008999319344459994,-0.000900
+Results 3.7; Table 6,Temporal matched delta RMSE maximum,Non-overlapping Temporal/final/temporal_multi_aoi_metrics.csv,max(delta_RMSE_matched),0.017763116581471804,0.017763
+Results 3.7; Table 6,Temporal preferred-history changes,Non-overlapping Temporal/final/temporal_history_changes.csv,sum(history_changed),7,7 of 12
+Results 3.7; Table 6,Temporal Rolling-Origin direction changes,Non-overlapping Temporal/final/temporal_history_changes.csv,sum(rolling_origin_direction_changed),3,3 of 12
+Results 3.7; Table 6,Landsat aerosol AOI-year retention minimum,Landsat Aerosol QA/final/aerosol_retention_summary.csv,min(retention_fraction),0.3553826199740597,0.355
+Results 3.7; Table 6,Landsat aerosol AOI-year retention maximum,Landsat Aerosol QA/final/aerosol_retention_summary.csv,max(retention_fraction),1.0,1.000
+Results 3.7; Table 6; Supplementary Table S9,Landsat strict aerosol AOI-02 2025 retention,sensitivity_summary.csv,"landsat_aerosol_qa,strict_aerosol,landsat,AOI-02",0.3955263157894736,0.396
+Results 3.7; Table 6,Landsat aerosol operational delta RMSE minimum,Landsat Aerosol QA/final/aerosol_multi_aoi_metrics.csv,min(delta_RMSE_operational),-0.003969037512778412,-0.003969
+Results 3.7; Table 6,Landsat aerosol operational delta RMSE maximum,Landsat Aerosol QA/final/aerosol_multi_aoi_metrics.csv,max(delta_RMSE_operational),0.027035763566811324,0.027036
+Results 3.7; Table 6,Landsat aerosol matched delta RMSE minimum,Landsat Aerosol QA/final/aerosol_multi_aoi_metrics.csv,min(delta_RMSE_matched),-0.0018372643771599542,-0.001837
+Results 3.7; Table 6,Landsat aerosol matched delta RMSE maximum,Landsat Aerosol QA/final/aerosol_multi_aoi_metrics.csv,max(delta_RMSE_matched),0.03399621372640512,0.033996
+Results 3.7; Table 6,Landsat aerosol preferred-history changes,Landsat Aerosol QA/final/aerosol_history_changes.csv,"sum(history_changed), excluding primary_no_aerosol_filter",4,4 of 12
+Results 3.7; Table 6,Landsat aerosol Rolling-Origin direction changes,Landsat Aerosol QA/final/aerosol_history_changes.csv,"sum(rolling_origin_direction_changed), excluding primary_no_aerosol_filter",9,9 of 12

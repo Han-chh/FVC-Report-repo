@@ -1,0 +1,66 @@
+\section{Methods}
+\subsection{Study areas, products, and native preprocessing}
+We evaluated four approximately 583 km$^2$ deliberately selected contrasting AOIs (Figure~\ref{fig:design}): AOI-00 ($99.51^{\circ}$E, $38.04^{\circ}$N), AOI-01 ($93.50^{\circ}$E, $36.50^{\circ}$N), AOI-02 ($95.60^{\circ}$E, $32.90^{\circ}$N), and AOI-03 ($97.20^{\circ}$E, $35.70^{\circ}$N). Selection used geographic separation, terrain, land-cover information, and 2021--2024 NDVI, not FCOVER numeric values or model performance. These deliberate contrasts are not a probability sample of the plateau.
+
+Sentinel-2 Harmonized surface reflectance, Landsat 8/9 Collection 2 Level-2 Tier-1 surface reflectance, MOD09Q1 Collection 6.1, and Copernicus FCOVER V2 RT6 were analysed for 2021--2025 at 20 July, 31 July, and 10 August (Table~\ref{tab:data}) \citep{esa2015sentinel,s2harmonized,s2products,s2processing,usgslandsat,landsatscale,landsatqa,nasamodis,mod09c61}. Range screening and native QA preceded NDVI; rejected pixels were NoData, never zero-filled. Table~\ref{tab:data} gives the authoritative bands, scaling, and detailed flags. Sentinel-2 retained the specified SCL classes and finite cloud probability below 30\%; Landsat excluded the listed QA\_PIXEL and QA\_RADSAT conditions, with no additional aerosol-specific screen in the primary analysis. Landsat Collection 2 Level-2 surface reflectance is already atmospherically corrected. MODIS retained clear, quality-controlled land observations under its State and QC rules.
+
+FCOVER was the native 300 m V2 RT6 grid (V2.0.1), not a resampled sensor product. Stored DN was scaled as $F=0.004DN$; pairing required non-NoData FCOVER, QFLAG, and NOBS, a true \texttt{valid\_domain\_mask}, QFLAG $<255$, NOBS $>0$, and $0\le F\le1$. QFLAG was not independently interpreted by quality class, and no FCOVER reference-quality sensitivity subset was evaluated.
+
+\input{tables/table01_data_sources}
+
+\subsection{NDVI, common target grid, and temporal composites}
+For every QA-retained native pixel, NDVI was calculated as
+\begin{equation}
+\mathrm{NDVI}=\frac{\rho_{\mathrm{NIR}}-\rho_{\mathrm{red}}}{\rho_{\mathrm{NIR}}+\rho_{\mathrm{red}}},
+\end{equation}
+after finite scaled-band and nonzero-denominator checks. Source-grid NDVI was reduced directly to the native FCOVER grid with the mean reducer and FCOVER projection; FCOVER was not resampled, and no intermediate 10 m or 30 m raster was made. Thus native scaling and QA $\rightarrow$ native NDVI $\rightarrow$ aggregation $\rightarrow$ temporal compositing $\rightarrow$ FCOVER pairing defined the primary route. Mean native NDVI is not equivalent to NDVI from aggregated reflectance; this distinction was evaluated in the additional sensitivity analyses below.
+
+The common 300 m target grid does not imply identical effective valid support. No per-cell valid-area fraction, overlap denominator, minimum native-pixel count, AOI-edge fraction, or additional coverage threshold was imposed; a cell was retained when its aggregated NDVI was finite. For each nominal date, the inclusive $\pm15$ d cell-wise median required at least two finite 300 m NDVI contributions. These nominal-date windows overlap and are not independent temporal replicates. MOD09Q1 is already an 8-day best-observation product, so this median is a second compositing stage. Cross-sensor target identities can differ after QA.
+
+\begin{figure*}[!t]
+\centering\includegraphics[width=.99\textwidth]{fig01_combined.pdf}
+\caption{(A) Four deliberately selected contrasting Qinghai Plateau AOIs. (B) Native QA and NDVI preceded aggregation to the native FCOVER grid; spatial, geographic, and chronological evaluations supplied complementary evidence.}
+\label{fig:design}
+\end{figure*}
+
+\subsection{Historical windows, blocks, and validation axes}
+The 2025 Multi-AOI matrix crossed three sensors, four AOIs, and six histories (2022, 2023, 2024, 2022--2023, 2023--2024, and 2022--2024), yielding 72 independently fitted runs. Rolling-Origin evaluation used H1--H3 = 2023, 2022--2023, and 2021--2023 for target 2024, and 2024, 2023--2024, and 2022--2024 for target 2025. Three sensors $\times$ four AOIs $\times$ two targets $\times$ three depths yielded another 72 runs, for 144 formal OLS runs. The study separately executed 48 DPM benchmark configurations (four AOIs $\times$ three sensors $\times$ four endmember pairs). Target or later-year FCOVER never entered an OLS fit.
+
+For every multi-year fit, a block was retained only if it contained valid pairs in every constituent year; eligible pairs were pooled in intercept-inclusive OLS. Years are consequently weighted by available pairs, not explicitly equally. A window can change constituent years, blocks, pair counts, and implicit weights, so the design does not isolate a causal effect of adding years. The 2025 H1/H2/H3 fits use the same complete-block rule as their nominally corresponding Multi-AOI histories.
+
+FCOVER-cell centers were transformed to EPSG:32647 and assigned an AOI-namespaced block identifier using a fixed 5 km grid:
+\begin{equation}
+c=\left\lfloor\frac{x-525000}{5000}\right\rfloor,\qquad
+r=\left\lfloor\frac{y-4195000}{5000}\right\rfloor.
+\end{equation}
+The block rule was stable across years. EPSG:32647 is used uniformly, although AOI-01 lies west of the conventional UTM zone; its point-scale factor at the AOI centre is 1.00259 (versus 0.99962--1.00085 for the other AOI centres). Thus ``5 km'' is an approximate grouping scale, not a claim of equal ground distance everywhere.
+
+For diagnostics, blocks were deterministically ranked by SHA-256 of \texttt{42-block\_id}; the first rounded 20\% formed a reserve. Development blocks supplied five-fold GroupKFold and LOYO for multi-year histories. GroupKFold is a block-grouped within-domain diagnostic, not buffered spatial extrapolation; LOYO holds out one constituent year and is inapplicable to single-year histories. The reserve was evaluated before refitting, not used for tuning, selection, or inference, and recombined before the prescribed full fit; it is therefore not an independent final test. These axes complement the Multi-AOI target, Rolling-Origin target, DPM comparator, and block inference.
+
+\subsection{Retrieval models, metrics, and inference}
+For each sensor, AOI, and historical window, we fit an intercept-inclusive OLS relation on paired NDVI--FCOVER values and clipped only its predictions:
+\begin{equation}
+\widehat{\mathrm{FVC}}_{\mathrm{OLS}}=\operatorname{clip}(a\,\mathrm{NDVI}+b,0,1).
+\end{equation}
+Clipping was not part of coefficient estimation. The secondary benchmark was an NDVI-based DPM,
+\begin{equation}
+\widehat{\mathrm{FVC}}_{\mathrm{DPM}}=\operatorname{clip}\!\left(\frac{\mathrm{NDVI}-\mathrm{NDVI}_{\rm low}}{\mathrm{NDVI}_{\rm high}-\mathrm{NDVI}_{\rm low}},0,1\right),
+\end{equation}
+For each AOI $\times$ sensor, finite 2025 NDVI values from eligible paired identities across dates defined prespecified P1/P99, P2/P98, P5/P95, and P10/P90 endpoint pairs. No target-year FCOVER numeric value entered endpoint estimation. Endpoints are empirical proxies, not measured pure endmembers. Predictions were clipped to $[0,1]$ and evaluated on the corresponding valid target identities. The displayed DPM and OLS minima were both retrospectively selected by 2025 RMSE; their comparison is secondary and descriptive under unequal information conditions \citep{gutman1998,huete1988,montandon2008,jiapaer2011,yan2022dpm,mu2024}.
+
+Endpoint sensitivity was quantified across all four prespecified DPM pairs for every sensor--AOI target sample as the range of RMSE, Bias, endpoint spread, and clipping fraction. Raw predictions were retained before clipping so that RMSE, MAE, and Bias could be compared before and after the fixed $[0,1]$ constraint. AOI-01 additionally received zero and historical-training-mean constant baselines using the exact complete-block historical sample of each OLS fit; target-year FCOVER was used only to evaluate those predictions. Thus neither DPM endpoints nor the predictive baselines use target-year FCOVER for construction. The primary OLS and DPM definitions, their target identities, and the existing retrospective selection rule were otherwise unchanged.
+
+For $n$ valid target pairs, with $e_i=\widehat F_i-F_i$, we report
+\begin{equation}
+\begin{aligned}
+\mathrm{RMSE}&=\sqrt{\frac{1}{n}\sum_{i=1}^{n}e_i^2},\qquad
+\mathrm{MAE}=\frac{1}{n}\sum_{i=1}^{n}|e_i|,\\
+\mathrm{Bias}&=\frac{1}{n}\sum_{i=1}^{n}e_i.
+\end{aligned}
+\end{equation}
+Bias is prediction minus FCOVER. We also report $R^2$ and Pearson $r$; $r$ was undefined when either vector had zero variance \citep{willmott2005,chai2014}.
+
+Rolling-Origin inference used paired 5 km block RMSE, not individual pixels, as its inferential unit. For each sensor--AOI--target-year contrast, every history was applied to the same eligible target-year AOI $\times$ nominal-date $\times$ FCOVER-grid-cell identities; the two block RMSE values were then joined by block identifier. Thus the paired block contrast compares predictions over identical target identities within each paired block, although the histories can have different training blocks and pair counts. For each contrast, $n$ was the number of blocks available in both compared histories, and $d_b=\mathrm{RMSE}_{\rm left,b}-\mathrm{RMSE}_{\rm right,b}$ was evaluated with a two-sided paired $t$ test: $\bar d$, its sample SD, $SE=s_d/\sqrt n$, $t=\bar d/SE$, and $df=n-1$. The reported 95\% confidence interval is $\bar d\pm t_{0.975,df}SE$. The 24 predefined sensor $\times$ AOI $\times$ target-year families each contained the H1--H2, H1--H3, and H2--H3 contrasts. Holm correction at $\alpha=0.05$ was applied only within these three-contrast families \citep{holm1979}; no global correction was made over 72 contrasts. With $\Delta\mathrm{RMSE}=\mathrm{RMSE}_{\rm left}-\mathrm{RMSE}_{\rm right}$, a positive value means lower block RMSE for the longer right-hand configuration, whereas a negative value means higher block RMSE for that configuration. The manuscript-wide count is descriptive across separately corrected families. Block differences may retain spatial dependence; no block-size sensitivity, buffered spatial CV, spatial-autocorrelation, permutation, or bootstrap robustness analysis was executed.
+
+\subsection{Additional sensitivity analyses}
+Three production sensitivities perturbed one preprocessing decision while retaining the FCOVER pairing, historical-window definitions, OLS fitting, Rolling-Origin evaluation, metrics, and block-level inference. First, the primary native-QA $\rightarrow$ native-NDVI $\rightarrow$ mean-NDVI route was compared with matched native RED/NIR valid-pixel support, mean RED and mean NIR on the FCOVER grid, and NDVI calculated from those aggregates. The matched support isolates aggregation order as far as the available products allow. Second, the primary inclusive $\pm15$ d nominal-date composites were retained as overlapping windows; a sensitivity assigned each source observation within their original temporal support to at most one nearest nominal date before compositing (ties to the earlier date), eliminating nominal-date reuse without redefining the primary experiment. Third, Landsat aerosol sensitivity applied verified \texttt{SR\_QA\_AEROSOL} modes in addition to the existing Collection 2 Level-2 surface-reflectance processing: exclusion of high aerosol, valid non-interpolated retrievals without high aerosol, and a strict valid-retrieval climatology/low-aerosol subset. Operational and matched-identity comparisons are distinguished where the perturbation changes support.
