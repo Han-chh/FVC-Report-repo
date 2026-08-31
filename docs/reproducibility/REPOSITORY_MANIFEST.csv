@@ -1,0 +1,10 @@
+category,path,role
+canonical_data,data/canonical/paired_observations.csv.gz,canonical paired input
+metadata,data/metadata,design and source provenance
+primary_code,code/reproduce_results.py,local numerical verification
+primary_results,results/primary,authoritative primary outputs
+aggregation_sensitivity,results/sensitivities/aggregation_order,active sensitivity summary
+landsat_aerosol_sensitivity,results/sensitivities/landsat_aerosol,active sensitivity summary
+manuscript_summary,results/manuscript_summary,locked manuscript-facing outputs
+figures,figures/manuscript,final manuscript figure
+scientific_audit,docs/audit/FINAL_SCIENTIFIC_AUDIT.md,design-lock audit

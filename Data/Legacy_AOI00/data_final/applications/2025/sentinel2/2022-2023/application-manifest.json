@@ -1,7 +1,0 @@
-{
-  "task_id": "new-sentinel2-2022-2023",
-  "status": "completed",
-  "input_ndvi_checksum": "cdbc5d9e625dfcbbdd785e3e9c226b7767bbd5bc47a6f392640dcc6305f81b6d",
-  "evaluation_mask_checksum": "a540cc82c5be604e850c9d1aad6fa78d67e069cbd85de06e542d0459c31110a7",
-  "model_manifest": "models/sentinel2/2022-2023/model-manifest.json"
-}

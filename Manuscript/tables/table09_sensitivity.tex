@@ -1,9 +1,0 @@
-\begin{table*}[!t]\centering\footnotesize
-\caption{Robustness of primary conclusions under additional sensitivity analyses. Ranges are across the reported sensor--AOI configurations; $\Delta$RMSE is sensitivity minus primary. Operational and matched-identity comparisons are distinguished when support changes. Detailed results are in Supplementary Tables S7--S9 and the archived repository outputs.}\label{tab:sensitivity}
-\begin{tabularx}{\textwidth}{L{2.35cm}L{1.55cm}Y Y Y Y}\toprule
-Sensitivity & Scope & Support/sample effect & Performance effect & History/transfer effect & Interpretation \\\midrule
-Aggregation order & 3 sensors, 4 AOIs & Matched target identities retained (1.000). Mean absolute matched $\Delta$NDVI: 0.000101--0.006864. & Operational $\Delta$RMSE: $-0.001458$ to $+0.000493$. & 1/12 preferred histories; 2/12 Rolling-Origin directions changed. & Geographic and common-grid conclusions robust; individual estimates quantitatively modified. \\
-Non-overlapping temporal composition & 3 sensors, 4 AOIs & Source assignment: 0.857--1.000; resulting target pairs: 0.132--0.992; no duplicate source identities. & Operational $\Delta$RMSE: $-0.002319$ to $+0.014052$; matched: $-0.000900$ to $+0.017763$. & 7/12 preferred histories; 3/12 Rolling-Origin directions changed. & No uniform longer-history advantage after removing nominal-date reuse. \\
-Landsat aerosol QA & 3 additional aerosol modes, 4 AOIs & AOI--year retention: 0.355--1.000; strict screening caused the greatest loss. & Operational $\Delta$RMSE: $-0.003969$ to $+0.027036$; matched: $-0.001837$ to $+0.033996$. & 4/12 preferred histories; 9/12 Rolling-Origin directions changed. & Landsat interpretation robust, with support-sensitive quantitative changes. \\
-\bottomrule\end{tabularx}
-\end{table*}

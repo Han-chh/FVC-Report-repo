@@ -1,4 +1,0 @@
-sensitivity,status,checkpoint_count,output_root
-Aggregation Order,PASS,60,Data/Additional Sensitivity Analysis/Aggregation Order
-Temporal Non-overlap,PASS,60,Data/Additional Sensitivity Analysis/Non-overlapping Temporal
-Landsat Aerosol QA,PASS,80,Data/Additional Sensitivity Analysis/Landsat Aerosol QA

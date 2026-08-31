@@ -1,0 +1,5 @@
+PRE_REORGANIZATION_COMMIT=2f690bf8917b28e3a11bfb06853092b0830233f4
+CURRENT_BRANCH=main
+REMOTE=origin git@github.com:Han-chh/FVC-Report-repo.git
+WORKTREE_STATUS=Modified tracked Phase 3 code; untracked authoritative Phase 3 code, configuration, and output directories; ignored local caches and intermediate artifacts retained pending classification.
+INVENTORY_FILE=docs/audit/REPOSITORY_PRECONSOLIDATION_INVENTORY.csv

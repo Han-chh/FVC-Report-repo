@@ -1,0 +1,4 @@
+removed_path,retained_path,reason,hash_match,reference_updates
+data/metadata/collection/gee_cloud_data_preparation_status.csv,data/metadata/collection/data_preparation_status.csv,Exact duplicate collection-status record,yes,None required
+data/metadata/collection/manifests/source_availability_manifest.csv,data/metadata/collection/data_preparation_status.csv,Exact duplicate collection-status record,yes,None required
+data/metadata/provenance/00_execution_manifest/source_scenes/ACTIVE_SOURCE_MANIFEST.json,data/metadata/provenance/00_execution_manifest/source_scenes/active_r2/ACTIVE_SOURCE_MANIFEST.json,Exact duplicate active source manifest,yes,Active runtime reference retained

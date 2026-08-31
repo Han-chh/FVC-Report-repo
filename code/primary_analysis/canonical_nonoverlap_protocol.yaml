@@ -1,0 +1,19 @@
+protocol_id: canonical_nearest_nominal_nonoverlap
+temporal_composition:
+  nominal_dates: ["07-20", "07-31", "08-10"]
+  temporal_support_days: 15
+  support_is_inclusive: true
+  assignment_rule: nearest_nominal_date
+  tie_rule: earlier_nominal_date
+  source_identity_reuse_across_nominal_dates: forbidden
+  reducer: cellwise_median
+  minimum_finite_contributions: 2
+modis:
+  product_date_identity: retain_existing_MOD09Q1_product_date_identity
+analysis:
+  multi_aoi_ols_runs: 72
+  rolling_origin_ols_runs: 72
+  dpm_endpoint_runs: 48
+  paired_block_contrasts: 72
+output_root: results/primary
+source_pairs: data/canonical/paired_observations.csv.gz

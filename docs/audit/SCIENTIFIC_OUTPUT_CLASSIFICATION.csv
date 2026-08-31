@@ -1,0 +1,10 @@
+path,category,scientific_role,current_manuscript_use,authoritative,deprecated_reason,generating_script
+repo/Data/Additional Sensitivity Analysis/Canonical Primary Nonoverlap 20260830,CANONICAL_PRIMARY,non-overlap primary outputs,YES,YES,,Code/scripts/34_promote_nonoverlap_primary.py
+repo/Data/Additional Sensitivity Analysis/New Nonoverlap Primary,ACTIVE_SENSITIVITY,aggregation-order sensitivity,YES,YES,,Code/scripts/35_phase1_nonoverlap_sensitivity.py
+repo/Data/Additional Sensitivity Analysis/New Nonoverlap Primary,ACTIVE_SENSITIVITY,Landsat aerosol-QA sensitivity,YES,YES,,Code/scripts/35_phase1_nonoverlap_sensitivity.py; Code/scripts/37_postprocess_phase1_aerosol.py
+repo/Data/Additional Sensitivity Analysis/Non-overlapping Temporal,LEGACY_DEPRECATED,former non-overlap sensitivity output,NO,NO,Non-overlap promoted to primary; retained for provenance,Code/Additional Sensitivity Analysis/non_overlapping_temporal/run_temporal_sensitivity.py
+repo/Data/Additional Sensitivity Analysis/Aggregation Order,LEGACY_DEPRECATED,overlapping-baseline aggregation output,NO,NO,Retired overlapping baseline,Code/Additional Sensitivity Analysis/aggregation_order/run_aggregation_order_sensitivity.py
+repo/Data/Additional Sensitivity Analysis/Landsat Aerosol QA,LEGACY_DEPRECATED,overlapping-baseline aerosol output,NO,NO,Retired overlapping baseline,Code/Additional Sensitivity Analysis/landsat_aerosol_qa/run_aerosol_sensitivity.py
+repo/Data/Results,LEGACY_DEPRECATED,pre-non-overlap formal results,NO,NO,"995,060-era lineage",Code/scripts/32_finalize_scientific_execution.py
+no_supplement_nonoverlap_phase1_sensitivity_20260830/figures/figure4_nonoverlap_contrasts.pdf,MANUSCRIPT_GENERATED,canonical primary block figure,YES,YES,,candidate build_assets.py
+repo/Data/Legacy_AOI00,DIAGNOSTIC_ONLY,legacy AOI-00 diagnostic files,NO,NO,Not formal multi-AOI evidence,legacy scripts

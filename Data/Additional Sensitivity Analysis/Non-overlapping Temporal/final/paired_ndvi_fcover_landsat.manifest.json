@@ -1,8 +1,0 @@
-{
-  "timestamp": "2026-08-30T09:12:23.452700+00:00",
-  "git_commit": "aef012d046ff2a69df905fb91a7a67a33ace5820",
-  "config_hash": "b4ad2d81ab5e738dc98d5d9b223d68657b22617f4609a45f704387e141f9c909",
-  "rows": 181863,
-  "output_sha256": "2e250db6f6075c5b13206dd59629983aa9b7f5cfbb425e87d2cc2c4b7ec59ff7",
-  "status": "COMPLETED"
-}

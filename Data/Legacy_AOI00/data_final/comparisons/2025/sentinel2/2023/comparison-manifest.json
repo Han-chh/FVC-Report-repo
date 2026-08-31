@@ -1,6 +1,0 @@
-{
-  "task_id": "new-sentinel2-2023",
-  "status": "completed",
-  "comparison_stats": "comparisons/2025/sentinel2/2023/comparison_stats.json",
-  "evaluation_mask_checksum": "a540cc82c5be604e850c9d1aad6fa78d67e069cbd85de06e542d0459c31110a7"
-}

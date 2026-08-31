@@ -2,13 +2,11 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+*.egg-info/
 .venv/
 reproduction_output/
 
-# Sensitivity-analysis Earth Engine checkpoints and large canonical pair caches
-# remain local; compact final summaries and validation reports are versioned.
-Data/Additional Sensitivity Analysis/**/intermediate/
-Data/Additional Sensitivity Analysis/**/logs/
-Data/Additional Sensitivity Analysis/**/manifests/
-Data/Additional Sensitivity Analysis/**/final/paired_ndvi_fcover*.csv
-Data/Additional Sensitivity Analysis/execution_audit/
+# Reproducibility reruns must direct expensive cloud materialization and scratch
+# outputs to a local temporary directory outside the repository.
+reproduction_output/
+tmp/

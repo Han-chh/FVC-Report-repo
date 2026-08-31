@@ -1,72 +1,50 @@
-# FVC Report repo
+# Multi-Sensor NDVI–FCOVER Agreement on a Common 300-m Grid
 
-Reproducibility package for the manuscript *Multi-Sensor NDVI-Based FVC Retrieval Agreement with Copernicus FCOVER on a Common 300 m Target Grid: Geographic Heterogeneity and Historical-Window Transfer across Qinghai Plateau AOIs*.
+This repository is the final reproducibility package for a study of agreement between NDVI-based fractional vegetation cover retrievals and Copernicus FCOVER V2 RT6. It covers Sentinel-2, Landsat 8/9, and MODIS across four Qinghai Plateau areas of interest (AOIs) during 2021–2025, using the native 300-m FCOVER target grid.
 
-This repository contains the exact derived analysis input, frozen design and provenance records, executable analysis code, and tabular results used by the submitted manuscript. It is organised so that a reviewer can independently verify the numerical results without cloud credentials or a new satellite-data download.
+The canonical temporal protocol assigns every eligible source observation within an inclusive ±15-day support window to its nearest nominal date (20 July, 31 July, or 10 August), breaks exact ties toward the earlier date, and permits no source reuse across nominal dates.
 
-## Repository layout
+## Repository structure
 
-| Path | Contents | Reviewer use |
-|---|---|---|
-| `Code/` | Active Python implementation, configurations, tests, and a portable result-verification runner. | Recompute and compare the 72 Multi-AOI runs, 72 Rolling-Origin runs, and 48 DPM candidates. |
-| `Data/Inputs/` | The frozen, derived NDVI--FCOVER paired-observation table. | Exact numerical input to the active analyses. |
-| `Data/Results/` | Run-level, block-level, coefficient, validation, manifest, and overview outputs. | Inspect every reported result and its integrity checks. |
-| `Data/Provenance/` | Frozen source-scene inventories, block manifest, execution manifest, processing identity, and authorization record. | Trace every input and result to the frozen design. |
-| `Data/Design/` | AOI registries and approved experiment-design records. | Check the geography, windows, and active experimental scope. |
-| `Data/DPM_stage2/` | Stage-2 all-AOI DPM benchmark outputs and audit. | Check the 48 endpoint candidates and the DPM--OLS comparison. |
-| `Data/Legacy_AOI00/` | Earlier AOI-00 support-grid data and code inputs retained only for the DPM legacy-reproduction check. | Audit the preserved historical consistency check separately from the four-AOI main analysis. |
+- `code/` contains the portable verification runner, scientific implementations, configurations, and tests.
+- `data/` contains the canonical paired input and metadata required to interpret and reproduce the analysis.
+- `results/` contains authoritative primary, sensitivity, and manuscript-summary outputs.
+- `figures/` contains final manuscript figures.
+- `docs/` contains methodology, reproducibility guidance, and audit records.
+- `environment/` contains the verified local dependency specification.
 
-## Quick verification
+## Primary analysis
 
-The quick check is fully local and does not contact Google Earth Engine or any other service.
+The locked primary analysis includes 72 Multi-AOI OLS runs, 72 Rolling-Origin OLS runs, 48 descriptive DPM endpoint configurations, and 72 predefined paired 5-km block contrasts. Fixed-origin 5-km blocks are the sole prespecified inferential aggregation scale; they reduce local pseudo-replication but do not establish spatial independence or an optimal block size.
+
+## Sensitivity analyses
+
+The active processing sensitivities are aggregation order and Landsat aerosol QA. Non-overlapping temporal assignment is the primary protocol, not a sensitivity analysis.
+
+## Reproducing the numerical results
+
+The local verification run does not require satellite-data downloads or cloud credentials.
 
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r Code/requirements-reproduction.txt
-python Code/reproduce_results.py
+python -m pip install -r environment/requirements.txt
+python code/reproduce_results.py
 ```
 
-The command recomputes the 72 Multi-AOI OLS evaluations, the 72 Rolling-Origin OLS evaluations, and the 48 all-AOI DPM endpoint evaluations from `Data/Inputs/paired_observations.csv.gz`. It compares the computed values against the committed machine-readable result tables and exits non-zero if any check fails.
+It verifies the canonical paired-input checksum and recomputes the 72 Multi-AOI OLS, 72 Rolling-Origin OLS, and 48 DPM rows against the committed final tables. See [the repository manifest](docs/reproducibility/REPOSITORY_MANIFEST.md) for entry points and output locations.
 
-## Data scope and provenance
+## Data availability
 
-The committed paired table is the exact derived input used for the published statistical analyses. It contains 995,060 sensor-specific observations after the frozen quality, support, temporal-compositing, and block-assignment rules. Its SHA-256 value is recorded in `Data/DPM_stage2/dpm_execution_log.json` and in the scientific execution manifests.
+`data/canonical/paired_observations.csv.gz` is the exact derived 681,545-row input used by the primary numerical checks. Source products are accessed from their public providers; scene identifiers, AOI definitions, and processing metadata are retained under `data/metadata/`.
 
-The source satellite products are accessed from their public providers rather than redistributed here: Sentinel-2 Harmonized surface reflectance through Google Earth Engine, Landsat 8/9 Collection 2 Level-2 Tier-1 surface reflectance through the U.S. Geological Survey, MOD09Q1 Collection 6.1 through NASA/LP DAAC, and Copernicus FCOVER V2 RT6 through the Copernicus Land Monitoring Service. Exact source-scene identifiers, GEE asset identifiers, dates, AOIs, and validation records are in `Data/Provenance/00_execution_manifest/source_scenes/active_r2/` and `Data/Collection_metadata/manifests/`.
+Agreement with FCOVER is not field-level validation, and a shared target grid does not imply identical post-QA effective support across sensors.
 
-No credentials, access tokens, personal data, or unpublished field observations are included.
+## Final scientific audit
 
-## Reproducibility boundary
-
-`Code/reproduce_results.py` is the recommended independent verification entry point. `Code/src/` and `Code/scripts/` preserve the full active processing and execution implementation. Recreating the upstream cloud extraction requires the relevant public-data accounts and a user-controlled Google Earth Engine project; it is not necessary to reproduce the reported numerical results because the exact derived input table and complete provenance records are included.
-
-The `Data/Legacy_AOI00/` branch is intentionally separate. It supports the legacy AOI-00 DPM consistency check documented in `Data/DPM_stage2/`; it is not a substitute for the frozen four-AOI main-analysis input.
-
-## Additional Sensitivity Analyses
-
-Three reproducible sensitivity pipelines are implemented in
-`Code/Additional Sensitivity Analysis/`: non-overlapping temporal composition,
-Landsat `SR_QA_AEROSOL` filtering, and NDVI-before-versus-after aggregation
-order. All three production runs are complete and isolated under
-`Data/Additional Sensitivity Analysis/`; the frozen primary inputs and results
-remain unchanged. The hard-gate result is
-`Data/Additional Sensitivity Analysis/Combined/MANUSCRIPT_INTEGRATION_READY.md`.
-
-The checkpointed production entry points are:
-
-```bash
-PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/non_overlapping_temporal/run_temporal_sensitivity.py" --run-core-evaluation
-PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/landsat_aerosol_qa/run_aerosol_sensitivity.py" --run-core-evaluation
-PYTHONPATH=Code/src python3 "Code/Additional Sensitivity Analysis/finalize_sensitivity_results.py" combined
-```
-
-Materialization writes atomic per-sensor/AOI/year checkpoints and resumes only
-valid completed checkpoints. Validation reports and final sensitivity tables
-are in each sensitivity directory; the five manuscript-integration artefacts
-are in `Data/Additional Sensitivity Analysis/Combined/`.
+The locked design, result provenance, and validation evidence are documented in [Final Scientific Audit](docs/audit/FINAL_SCIENTIFIC_AUDIT.md).
 
 ## Citation
 
-Please cite the associated manuscript and this repository version (commit hash or release tag) when using these materials. A formal software/data license has not yet been selected; reuse beyond review and scholarly verification requires the author's permission.
+Please cite the associated manuscript and this repository commit. No DOI or release has been created.
