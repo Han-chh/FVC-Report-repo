@@ -38,4 +38,4 @@ Active paths are repository-relative; see `PATH_PORTABILITY_AUDIT.md`. `environm
 
 ## Git and remote status
 
-Commit and push status are recorded after final diff review and normal remote synchronization.
+The consolidation commit `893d432be5f8644bf3654e45830d8bad22a58235` was pushed normally to `origin/main` from a non-divergent local branch. No force push, tag, release, DOI, or publication snapshot was created.
