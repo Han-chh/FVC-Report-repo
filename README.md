@@ -2,6 +2,8 @@
 
 This repository is the final reproducibility package for a study of agreement between NDVI-based fractional vegetation cover retrievals and Copernicus FCOVER V2 RT6. It covers Sentinel-2, Landsat 8/9, and MODIS across four Qinghai Plateau areas of interest (AOIs) during 2021–2025, using the native 300-m FCOVER target grid.
 
+The AOIs are the locked analysis units `AOI-00`, `AOI-01`, `AOI-02`, and `AOI-03`; their geometries and selection metadata are in `data/metadata/design/multi_aoi/final_four_aoi_registry.geojson`. The source products are Sentinel-2 L2A (`COPERNICUS/S2_SR_HARMONIZED`), Landsat Collection 2 Level-2 Tier 1 (`LANDSAT/LC08/C02/T1_L2`, `LANDSAT/LC09/C02/T1_L2`), MODIS MOD09Q1 v6.1 (`MODIS/061/MOD09Q1`), and Copernicus FCOVER V2 RT6.
+
 The canonical temporal protocol assigns every eligible source observation within an inclusive ±15-day support window to its nearest nominal date (20 July, 31 July, or 10 August), breaks exact ties toward the earlier date, and permits no source reuse across nominal dates.
 
 ## Repository structure

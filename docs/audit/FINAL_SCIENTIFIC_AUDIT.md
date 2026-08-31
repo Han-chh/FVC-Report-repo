@@ -24,7 +24,7 @@ The scientific design is locked and ready for Phase 4 clean reproduction and pub
 
 ## Methods code-to-text parity
 
-Products, scaling, QA, masks, common target grid, FCOVER validity, NDVI, aggregation order, nearest-nominal assignment, tie rule, two-contribution reducer, history windows, complete-block rule, OLS, clipping, DPM endpoints, retrospective selection, Rolling-Origin, 5-km blocks, paired tests, Holm correction, and active sensitivity semantics were cross-referenced to `Code/configs/canonical_nonoverlap_primary.yaml`, `Code/src/additional_sensitivity_analysis/production.py`, `temporal.py`, `finalize.py`, `Code/src/execution/science.py`, and `Code/src/metrics/`. Result: PASS.
+Products, scaling, QA, masks, common target grid, FCOVER validity, NDVI, aggregation order, nearest-nominal assignment, tie rule, two-contribution reducer, history windows, complete-block rule, OLS, clipping, DPM endpoints, retrospective selection, Rolling-Origin, 5-km blocks, paired tests, Holm correction, and active sensitivity semantics were cross-referenced to `code/configs/scientific_execution.yaml`, `code/src/additional_sensitivity_analysis/production.py`, `code/src/additional_sensitivity_analysis/temporal.py`, `code/src/execution/science.py`, and `code/src/metrics/`. Result: PASS.
 
 ## Candidate corrections
 

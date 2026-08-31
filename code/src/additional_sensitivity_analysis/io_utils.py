@@ -13,11 +13,11 @@ def repository_path(relative_path: str | Path) -> Path:
 
 
 def assert_sensitivity_output_path(path: str | Path) -> Path:
-    """Allow writes only within the isolated additional-sensitivity output root."""
+    """Allow writes only to an explicit reconstruction directory outside the repository."""
     resolved = repository_path(path).resolve()
-    allowed = (repository_path("results/sensitivities")).resolve()
-    if allowed not in (resolved, *resolved.parents):
-        raise ValueError(f"SENSITIVITY_OUTPUT_OUTSIDE_ISOLATED_ROOT:{resolved}")
+    repository = repository_path(".").resolve()
+    if repository == resolved or repository in resolved.parents:
+        raise ValueError(f"OUTPUT_MUST_BE_OUTSIDE_REPOSITORY:{resolved}")
     return resolved
 
 

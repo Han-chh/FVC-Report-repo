@@ -80,12 +80,7 @@ def registry() -> dict[str, dict[str, Any]]:
 
 
 def assert_output_root(path: Path) -> Path:
-    resolved = assert_sensitivity_output_path(path)
-    frozen = [(REPOSITORY_ROOT / "data/canonical").resolve(), (REPOSITORY_ROOT / "results").resolve(),
-              (REPOSITORY_ROOT / "data/metadata").resolve()]
-    if any(root == resolved or root in resolved.parents for root in frozen):
-        raise ValueError(f"SENSITIVITY_OUTPUT_COLLIDES_WITH_FROZEN_DATA:{resolved}")
-    return resolved
+    return assert_sensitivity_output_path(path)
 
 
 def _included(rows: Iterable[dict[str, str]], aoi: str, year: int, nominal: str) -> list[dict[str, str]]:

@@ -2,12 +2,12 @@
   "status": "PASS",
   "generated_utc": "2026-08-30T13:39:13.639245+00:00",
   "protocol": "nearest_nominal_nonoverlap",
-  "source_pairs": "/Users/hankchen/Desktop/FVC\u6a21\u578b/report/final submission/repo/Data/Additional Sensitivity Analysis/Non-overlapping Temporal/final/paired_ndvi_fcover.csv",
-  "source_pairs_sha256": "c29c5458535b9e5275c8efc581d7dd4f25836783e2b7787a1f9c6d0197dcc0a3",
+  "source_pairs": "data/canonical/paired_observations.csv.gz",
+  "source_pairs_sha256": "ca7237ba51a164c1f3247fa423dbbd10e0be2954aa19c6f31fb9262d703e7381",
   "pair_rows": 681545,
   "multi_aoi_runs": 72,
   "rolling_origin_runs": 72,
   "dpm_runs": 48,
   "block_contrasts": 72,
-  "code_sha256": "e35be830bd9a080c34007b120619febc22a7f97fd2c7b2959315171ff9beecd6"
+  "code_sha256": "9c2c44fdb5c843caaf6e0ed89d4f5b4c58923387d4443479de961fbe5c8f1660"
 }

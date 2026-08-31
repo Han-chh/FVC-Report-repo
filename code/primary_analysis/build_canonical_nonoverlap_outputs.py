@@ -18,7 +18,6 @@ from models.ols import predict_clipped
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "data/canonical/paired_observations.csv.gz"
-DEFAULT_OUTPUT = ROOT / "results/primary"
 QUANTILES = ((1, 99), (2, 98), (5, 95), (10, 90))
 
 
@@ -111,7 +110,8 @@ def write_report(output: Path, pairs: pd.DataFrame, frames: dict[str, pd.DataFra
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--output", type=Path, required=True,
+                        help="Empty, explicit reconstruction directory outside the repository.")
     parser.add_argument("--resume", action="store_true", help="Overwrite only this dedicated regenerated result directory.")
     args = parser.parse_args()
     output = args.output.resolve()

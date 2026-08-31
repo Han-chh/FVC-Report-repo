@@ -1,6 +1,6 @@
 # Final Results Manifest
 
-`FINAL_RESULTS_MANIFEST.csv` contains 1,094 source-linked numeric and comparison-state records. The canonical primary data are `repo/Data/Additional Sensitivity Analysis/Canonical Primary Nonoverlap 20260830`; only the final non-overlap-baseline aggregation and repaired aerosol summaries are active sensitivity sources.
+`FINAL_RESULTS_MANIFEST.csv` contains 1,094 source-linked numeric and comparison-state records. The canonical primary data are `data/canonical/paired_observations.csv.gz`; authoritative primary tables are under `results/primary/`. Only the final non-overlap-baseline aggregation and repaired aerosol summaries under `results/sensitivities/` are active sensitivity sources.
 
 ## Headline primary values
 

@@ -24,7 +24,6 @@ from additional_sensitivity_analysis.production import (
 ROOT = Path(__file__).resolve().parents[2]
 PRIMARY = ROOT / "results/primary"
 PRIMARY_PAIRS = ROOT / "data/canonical/paired_observations.csv.gz"
-DEFAULT_OUTPUT = ROOT / "results/sensitivities"
 IDENTITY = ["aoi_id", "sensor", "year", "nominal_date", "pixel_id"]
 MODES = ("exclude_high_aerosol", "valid_retrieval_no_high", "strict_aerosol")
 EVALUATION_FILES = (
@@ -221,11 +220,14 @@ def report(output: Path, route_a_ok: bool, route_a_detail: str, agg: pd.DataFram
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--output", type=Path, required=True,
+                        help="Empty, explicit reconstruction directory outside the repository.")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     output = args.output.resolve()
-    output.mkdir(parents=True, exist_ok=True)
+    if output.exists() and any(output.iterdir()) and not args.resume:
+        raise RuntimeError(f"OUTPUT_NOT_EMPTY:{output}")
+    output.mkdir(parents=True, exist_ok=args.resume)
     canonical = pd.read_csv(PRIMARY_PAIRS)
     if len(canonical) != 681545:
         raise RuntimeError(f"PHASE1_CANONICAL_PAIR_COUNT_UNEXPECTED:{len(canonical)}")
