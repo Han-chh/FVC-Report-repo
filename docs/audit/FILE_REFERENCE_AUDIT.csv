@@ -1,0 +1,36 @@
+source_file,reference,resolved_path,exists,role,status
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/manuscript_summary/canonical_primary_manifest.json,results/manuscript_summary/canonical_primary_manifest.json,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/block_inference/block_contrasts.csv,results/primary/block_inference/block_contrasts.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/dpm/aoi01_baseline_clipping.csv,results/primary/dpm/aoi01_baseline_clipping.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/dpm/dpm_endpoint_sensitivity.csv,results/primary/dpm/dpm_endpoint_sensitivity.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/dpm/dpm_vs_ols_selected.csv,results/primary/dpm/dpm_vs_ols_selected.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/multi_aoi/multi_aoi_metrics.csv,results/primary/multi_aoi/multi_aoi_metrics.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/primary/rolling_origin/rolling_origin_metrics.csv,results/primary/rolling_origin/rolling_origin_metrics.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/sensitivities/aggregation_order/summary/aggregation_configuration_summary.csv,results/sensitivities/aggregation_order/summary/aggregation_configuration_summary.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_MATCHED_COMPARISONS.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_MATCHED_COMPARISONS.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_QA_FINAL_SUMMARY.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_QA_FINAL_SUMMARY.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_RO_DIRECTION_AUDIT.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_RO_DIRECTION_AUDIT.csv,True,manifest/provenance source,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,code/primary_analysis/build_canonical_nonoverlap_outputs.py,True,manifest/provenance generator,PASS
+results/manuscript_summary/FINAL_RESULTS_MANIFEST.csv,code/sensitivities/build_processing_sensitivities.py,code/sensitivities/build_processing_sensitivities.py,True,manifest/provenance generator,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/manuscript_summary/canonical_primary_manifest.json,results/manuscript_summary/canonical_primary_manifest.json,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/block_inference/block_contrasts.csv,results/primary/block_inference/block_contrasts.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/dpm/aoi01_baseline_clipping.csv,results/primary/dpm/aoi01_baseline_clipping.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/dpm/dpm_endpoint_sensitivity.csv,results/primary/dpm/dpm_endpoint_sensitivity.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/dpm/dpm_vs_ols_selected.csv,results/primary/dpm/dpm_vs_ols_selected.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/multi_aoi/multi_aoi_metrics.csv,results/primary/multi_aoi/multi_aoi_metrics.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/primary/rolling_origin/rolling_origin_metrics.csv,results/primary/rolling_origin/rolling_origin_metrics.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/sensitivities/aggregation_order/summary/aggregation_configuration_summary.csv,results/sensitivities/aggregation_order/summary/aggregation_configuration_summary.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/sensitivities/aggregation_order/summary/aggregation_history_changes.csv,results/sensitivities/aggregation_order/summary/aggregation_history_changes.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_MATCHED_COMPARISONS.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_MATCHED_COMPARISONS.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_QA_FINAL_SUMMARY.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_QA_FINAL_SUMMARY.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_RO_DIRECTION_AUDIT.csv,results/sensitivities/landsat_aerosol/summary/AEROSOL_RO_DIRECTION_AUDIT.csv,True,manifest/provenance source,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,code/primary_analysis/build_canonical_nonoverlap_outputs.py,True,manifest/provenance generator,PASS
+docs/audit/MANUSCRIPT_RESULT_PROVENANCE.csv,code/sensitivities/build_processing_sensitivities.py,code/sensitivities/build_processing_sensitivities.py,True,manifest/provenance generator,PASS
+code/primary_analysis/build_canonical_nonoverlap_outputs.py,data/canonical/paired_observations.csv.gz,data/canonical/paired_observations.csv.gz,True,active/local workflow,PASS
+code/sensitivities/build_processing_sensitivities.py,results/primary,results/primary,True,active/local workflow,PASS
+code/src/additional_sensitivity_analysis/production.py,data/metadata/provenance/00_execution_manifest/source_scenes/active_r2,data/metadata/provenance/00_execution_manifest/source_scenes/active_r2,True,active/local workflow,PASS
+README.md,code/reproduce_results.py,code/reproduce_results.py,True,active/local workflow,PASS
+README.md,docs/audit/FINAL_SCIENTIFIC_AUDIT.md,docs/audit/FINAL_SCIENTIFIC_AUDIT.md,True,active/local workflow,PASS
+code/src/execution/gate.py,historical pre-consolidation workspace references,not applicable,False,documented historical utility,DOCUMENTED_HISTORICAL
+code/src/execution/remediation.py,historical pre-consolidation workspace references,not applicable,False,documented historical utility,DOCUMENTED_HISTORICAL
+code/src/aoi_expansion/select_final_aois.py,historical pre-consolidation workspace references,not applicable,False,documented historical utility,DOCUMENTED_HISTORICAL

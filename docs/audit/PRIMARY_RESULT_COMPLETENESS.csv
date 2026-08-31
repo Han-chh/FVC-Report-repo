@@ -1,0 +1,5 @@
+analysis,expected_count,observed_count,missing_units,duplicate_units,status
+Multi-AOI OLS,72,72,0,0,PASS
+Rolling-Origin OLS,72,72,0,0,PASS
+DPM configurations,48,48,0,0,PASS
+5-km block contrasts,72,72,0,0,PASS

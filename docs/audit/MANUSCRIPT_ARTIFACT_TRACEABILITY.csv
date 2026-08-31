@@ -1,0 +1,8 @@
+table_or_figure,source_data,generation_code,current_output,status
+Table 1,"code/configs/{sensors,base_methodology,fcover_reference_preprocessing}.yaml",docs/methodology/FINAL_SCIENTIFIC_DESIGN_LOCK.md,manuscript methods source,PASS
+Table 2,results/primary/multi_aoi/multi_aoi_metrics.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,manuscript performance table source,PASS
+Table 3,results/primary/dpm/dpm_vs_ols_selected.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,manuscript DPM/OLS table source,PASS
+Table 4,results/primary/dpm/aoi01_baseline_clipping.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,manuscript AOI-01 diagnostic source,PASS
+Table 5,results/primary/block_inference/block_contrasts.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,manuscript block-inference source,PASS
+Table 6,"results/sensitivities/{aggregation_order,landsat_aerosol}/summary",code/sensitivities/build_processing_sensitivities.py,manuscript sensitivity table source,PASS
+Figure 4,results/primary/block_inference/block_contrasts.csv,code/primary_analysis/build_canonical_nonoverlap_outputs.py,figures/manuscript/primary_block_contrasts.pdf,PASS

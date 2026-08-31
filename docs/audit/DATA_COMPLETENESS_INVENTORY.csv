@@ -1,0 +1,10 @@
+path,role,format,row_count_if_practical,classification,required_by_code,present,readable,schema_valid,README_referenced,active_code_referenced,notes
+data/canonical/paired_observations.csv.gz,canonical analysis input,CSV.GZ,681545,canonical,yes,yes,yes,yes,yes,yes,schema: 11 required paired-observation fields
+data/metadata/design/multi_aoi/final_four_aoi_registry.geojson,AOI geometry and target metadata,GeoJSON,4,metadata,yes,yes,yes,yes,yes,yes,four locked AOIs
+data/metadata/provenance/00_execution_manifest/source_scenes/active_r2,frozen source-scene manifests,CSV directory,,metadata,yes,yes,yes,yes,yes,yes,Sentinel-2/Landsat/MODIS scene identity records
+data/metadata/provenance/00_execution_manifest/BLOCK_MANIFEST.csv,5-km block metadata,CSV,,metadata,yes,yes,yes,yes,yes,yes,prespecified block identifiers
+results/primary,authoritative primary outputs,CSV directory,264,derived/results,yes,yes,yes,yes,yes,yes,72+72+48+72 principal rows
+results/sensitivities/aggregation_order,aggregation-order sensitivity summaries and matched support outputs,CSV directory,12,derived/results,yes,yes,yes,yes,yes,yes,Route A control and Route B represented
+results/sensitivities/landsat_aerosol,Landsat aerosol-QA sensitivity summaries,CSV directory,60,derived/results,yes,yes,yes,yes,yes,yes,"support matrix has three modes, four AOIs, five years"
+results/manuscript_summary,locked manuscript-facing manifest,CSV/JSON/MD,1094,derived/results,yes,yes,yes,yes,yes,yes,all source-file and generating-script pointers resolve
+data/metadata/collection,upstream acquisition metadata,CSV/JSON/MD directory,,external-upstream metadata,no (raw scenes intentionally excluded),n/a,yes,yes,yes,no,scene/product lineage is retained; raw satellite assets are external
