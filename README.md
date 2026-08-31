@@ -1,4 +1,4 @@
-# Multi-Sensor NDVI–FCOVER Agreement on a Common 300-m Grid
+# Multi-Sensor NDVI-Based FVC Retrieval Agreement with Copernicus FCOVER: Geographic Heterogeneity and Historical-Window Transfer across Qinghai Plateau AOIs
 
 This repository is the final reproducibility package for a study of agreement between NDVI-based fractional vegetation cover retrievals and Copernicus FCOVER V2 RT6. It covers Sentinel-2, Landsat 8/9, and MODIS across four Qinghai Plateau areas of interest (AOIs) during 2021–2025, using the native 300-m FCOVER target grid.
 
